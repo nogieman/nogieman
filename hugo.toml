@@ -38,32 +38,32 @@ defaultContentLanguageInSubdir = true
         name = "Contact"
         pageRef = "/contact"
         weight = 5
-  [languages.es]
-    languageName = "Español"
-    title = "Pranam Shetty"
-    weight = 2
-    contentDir = "content/es"
-    [languages.es.menu]
-      [[languages.es.menu.main]]
-        name = "Sobre Mí"
-        pageRef = "/about"
-        weight = 1
-      [[languages.es.menu.main]]
-        name = "Experiencia"
-        pageRef = "/experience"
-        weight = 2
-      [[languages.es.menu.main]]
-        name = "Proyectos"
-        pageRef = "/projects"
-        weight = 3
-      [[languages.es.menu.main]]
-        name = "Blogs"
-        pageRef = "/blogs"
-        weight = 4
-      [[languages.es.menu.main]]
-        name = "Contacto"
-        pageRef = "/contact"
-        weight = 5
+  # [languages.es]
+  #   languageName = "Español"
+  #   title = "Pranam Shetty"
+  #   weight = 2
+  #   contentDir = "content/es"
+  #   [languages.es.menu]
+  #     [[languages.es.menu.main]]
+  #       name = "Sobre Mí"
+  #       pageRef = "/about"
+  #       weight = 1
+  #     [[languages.es.menu.main]]
+  #       name = "Experiencia"
+  #       pageRef = "/experience"
+  #       weight = 2
+  #     [[languages.es.menu.main]]
+  #       name = "Proyectos"
+  #       pageRef = "/projects"
+  #       weight = 3
+  #     [[languages.es.menu.main]]
+  #       name = "Blogs"
+  #       pageRef = "/blogs"
+  #       weight = 4
+  #     [[languages.es.menu.main]]
+  #       name = "Contacto"
+  #       pageRef = "/contact"
+  #       weight = 5
   [languages.fr]
     languageName = "Français"
     title = "Pranam Shetty"
