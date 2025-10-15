@@ -1,4 +1,4 @@
-baseURL = "https://nogieman.github.io/"
+baseURL = "https://nogieman.github.io/en/"
 languageCode = 'en-us'
 title = 'Pranam Shetty'
 theme = 'hugo-noir'
