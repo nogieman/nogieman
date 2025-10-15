@@ -1,0 +1,91 @@
+blogs:
+  - title: "L'Attention N'Est Pas Tout Ce Dont Vous Avez Besoin. C'Est Comment Vous En Avez Besoin."
+    date: "2025-09-07"
+    summary: "Jet-Nemotron repense l'IA en utilisant l'attention seulement quand nécessaire, augmentant dramatiquement la vitesse et la précision par rapport aux modèles traditionnels à attention complète."
+    tags: ["Transformers", "Mécanismes d'Attention", "Architecture IA", "Réseaux de Neurones", "Apprentissage Automatique"]
+    content: "En 2017, l'article 'Attention Is All You Need' a lancé une révolution. Il a fourni le Transformer, la base architecturale derrière presque tous les modèles de langage de pointe depuis sa création."
+    link: "https://medium.com/@prxshetty/attention-is-not-all-you-need-its-how-you-need-it-ecae47ce04b1"
+
+  - title: "Les LLM sont-ils inutilement énormes ? Compression extrême des LLMs utilisant des réseaux tensoriels inspirés de la physique quantique"
+    date: "2025-08-23"
+    summary: "Présente une nouvelle approche appelée CompactifAI par Multiverse Computing, qui utilise des réseaux tensoriels inspirés de la physique quantique pour compresser drastiquement les LLMs avec une perte minimale de précision."
+    tags: ["Réseaux tensoriels inspirés de la physique quantique", "Compression de modèles", "Apprentissage automatique"]
+    content: "Des LLMs plus grands signifient de meilleures performances. Cela a conduit à une course aux paramètres, aux données et aux capacités de calcul."
+    link: "https://medium.com/@prxshetty/are-llms-needlessly-huge-extreme-compression-of-llms-using-quantum-inspired-tensor-networks-11d8d24f8ef9"
+
+  - title: "Comment les Modèles d'IA s'Entraînent sur des Données Privées Sans y Accéder : L'Apprentissage Fédéré Expliqué"
+    date: "2025-08-16"
+    summary: "L'Apprentissage Fédéré (FL) permet aux modèles d'IA de s'entraîner sur des données distribuées sans centraliser les informations sensibles. Au lieu de collecter les données en un seul endroit, FL envoie des copies du modèle à des appareils locaux où ils s'entraînent sur des données privées."
+    tags: ["Apprentissage Fédéré", "Calcul Distribué", "Apprentissage Automatique", "Blockchain"]
+    content: "Nous recevons beaucoup de données des téléphones, voitures et capteurs intelligents chaque jour. Ces données sont utiles pour entraîner des modèles d'apprentissage automatique. L'ancienne méthode consistait à envoyer toutes ces données à un serveur central pour l'entraînement."
+    link: "https://medium.com/@prxshetty/how-ai-models-train-on-private-data-without-accessing-it-federated-learning-explained-7b6f9c070f44"
+
+  - title: "Les LLM peuvent-ils vraiment faire de la recherche web ? (et pourquoi votre agent reste bloqué)"
+    date: "2025-08-09"
+    summary: "Malgré des capacités impressionnantes pour des tâches simples, les agents d'IA actuels échouent systématiquement dans les recherches web complexes et multi-étapes nécessitant une réflexion stratégique, la validation des sources et des méthodologies adaptatives."
+    tags: ["ReAct", "Recherche Approfondie", "LLMs Pensants", "Invites"]
+    content: "Lorsque les agents échouent, ce n’est pas au hasard. Les pannes ont tendance à se regrouper autour de quelques étapes — recherche, sélection de pages, extraction de faits à partir des pages, mise à jour de la stratégie, rapprochement ..."
+    link: "https://medium.com/@prxshetty/can-llms-really-do-web-research-and-why-your-agent-still-gets-stuck-d74598b44e45"
+
+  - title: "Comment j'ai construit un Essaim d'Agents IA avec LangChain"
+    date: "2025-03-18"
+    summary: "Ce blog explique en détail comment j'ai construit mon projet pendant le week-end (que vous pouvez aussi faire !), un Système de Réponse d'Urgence pour Voyages."
+    tags: ["LangChain", "LangGraph", "LangSmith", "OpenAI"]
+    content: "Le processus de réponse d'urgence commence lorsqu'un utilisateur fournit des informations décrivant sa situation d'urgence. Cette entrée peut être un message texte, une entrée vocale, ou toute autre forme de communication."
+    link: "https://medium.com/@prxshetty/how-i-built-a-swarm-of-ai-agents-with-langchain-2e0916ce0d38"
+
+  - title: "Pourquoi l'IA oublie encore — Et comment nous y remédions"
+    date: "2025-03-04"
+    summary: "Salut tout le monde ! Vous savez comment les Grands Modèles de Langage (LLMs) semblent parfois un peu... oublieux ?"
+    tags: ["LLM", "Recherche", "architecture"]
+    content: "Scribe, le modèle révolutionnaire de transcription IA d'ElevenLabs, établit une nouvelle référence en matière de précision et d'efficacité pour la technologie de reconnaissance vocale..."
+    link: "https://medium.com/@prxshetty/why-ai-still-forgets-and-how-were-fixing-it-7d3597f02638"
+
+  - title: "Scribe, le Modèle de Transcription IA le plus Avancé à ce jour"
+    date: "2025-03-01"
+    summary: "Scribe, le premier modèle de Reconnaissance Vocale d'ElevenLabs, est le modèle de transcription le plus précis au monde."
+    tags: ["IA", "Transcription", "Reconnaissance Vocale"]
+    content: "Scribe, le modèle révolutionnaire de transcription IA d'ElevenLabs, établit une nouvelle référence en matière de précision et d'efficacité pour la technologie de reconnaissance vocale..."
+    link: "https://medium.com/@prxshetty/scribe-the-most-advanced-ai-transcription-model-yet-d5cd7f96368d"
+
+  - title: "Grok 3 : L'IA qui pourrait défier DeepSeek et le meilleur d'OpenAI"
+    date: "2025-02-18"
+    summary: "Elon Musk et son équipe ont présenté Grok 3, un modèle d'IA avec des capacités de raisonnement et de résolution de problèmes à la pointe de la technologie."
+    tags: ["IA", "Grok 3", "OpenAI"]
+    content: "Sur X (anciennement Twitter), Elon Musk a révélé les impressionnantes capacités de Grok 3. Pourrait-il s'agir du prochain grand concurrent dans le domaine de l'IA ?"
+    link: "https://medium.com/@prxshetty/grok-3-the-ai-that-could-challenge-deepseek-and-openais-best-e20b3f8ad5e2"
+
+  - title: "Vous voulez maîtriser les LLMs open-source en 2025 ? Commencez par DeepSeek V3"
+    date: "2025-01-05"
+    summary: "DeepSeek V3 fait des vagues dans l'IA avec ses 671 milliards de paramètres et son architecture révolutionnaire."
+    tags: ["LLMs", "IA", "Apprentissage Profond"]
+    content: "Découvrez DeepSeek V3 — la puissance de l'IA qui fait tourner les têtes dans la Silicon Valley avec son échelle massive et ses fonctionnalités innovantes..."
+    link: "https://medium.com/@prxshetty/want-to-master-open-source-llms-in-2025-start-with-deepseek-v3-f485d45a6387"
+
+  - title: "Benchmarks d'IA : Mesurons-nous la bonne chose ?"
+    date: "2025-01-01"
+    summary: "Les benchmarks d'IA sont-ils vraiment représentatifs des performances dans le monde réel, ou induisent-ils notre compréhension en erreur ?"
+    tags: ["IA", "Benchmarks", "Apprentissage Automatique"]
+    content: "Et si les métriques sur lesquelles nous nous appuyons pour évaluer les modèles d'IA étaient défectueuses ? Cet article explore les limites des méthodes actuelles de benchmarking..."
+    link: "https://medium.com/@prxshetty/ai-benchmarks-are-we-measuring-the-right-thing-1b601fcc0e4e"
+
+  - title: "Oubliez les maux de tête SQL : Apprenez à convertir les schémas"
+    date: "2024-12-04"
+    summary: "Un guide étape par étape pour passer des bases de données relationnelles aux bases de données de graphes pour de meilleures performances et évolutivité."
+    tags: ["Bases de données", "GraphQL", "SQL"]
+    content: "La transition de SQL vers une base de données de graphes peut être intimidante. Voici un guide simple pour rendre le processus fluide et efficace..."
+    link: "https://medium.com/@prxshetty/forget-sql-headaches-learn-how-to-convert-schemas-to-a-graph-database-today-b78c144716ec"
+
+  - title: "Claude peut maintenant utiliser des ordinateurs..."
+    date: "2024-12-03"
+    summary: "L'IA Claude 3.5 Sonnet d'Anthropic interagit désormais avec les ordinateurs comme les humains."
+    tags: ["IA", "Claude", "Anthropic"]
+    content: "Et si votre assistant IA pouvait naviguer sur un ordinateur comme vous ? Avec sa dernière mise à jour, Claude 3.5 Sonnet porte l'assistance IA au niveau supérieur..."
+    link: "https://medium.com/@prxshetty/claude-can-now-use-computers-9b056d1e0e8b"
+
+  - title: "Étude des Fonctions d'Activation et Méthodes d'Initialisation"
+    date: "2024-09-09"
+    summary: "Une exploration étayée par la recherche des fonctions d'activation et des techniques d'initialisation en apprentissage profond."
+    tags: ["Apprentissage Profond", "Réseaux de Neurones", "Recherche en IA"]
+    content: "Lançant une nouvelle série de recherche, cet article décompose les fonctions d'activation et leur impact sur la stabilité de l'entraînement..."
+    link: "https://medium.com/@prxshetty/paper-analysis-01-a-survey-on-activation-functions-and-their-relation-with-xavier-and-he-normal-01a64dff5c16"

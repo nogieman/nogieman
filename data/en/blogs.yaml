@@ -1,0 +1,92 @@
+blogs:
+  - title: "Attention Is Not All You Need. It's How You Need It."
+    date: "2025-09-07"
+    summary: "Jet-Nemotron rethinks AI by using attention only when necessary, dramatically boosting speed and accuracy compared to traditional full-attention models."
+    tags: ["Transformers", "Attention Mechanisms", "AI Architecture", "Neural Networks", "Machine Learning"]
+    content: "In 2017, the paper 'Attention Is All You Need' launched a revolution. It provided the Transformer, the architectural foundation behind almost all cutting-edge language models since its inception."
+    link: "https://medium.com/@prxshetty/attention-is-not-all-you-need-its-how-you-need-it-ecae47ce04b1"
+
+  - title: "Are LLMs Needlessly Huge? Extreme Compression of LLMs using Quantum Inspired Tensor Networks"
+    date: "2025-08-23"
+    summary: "Presents a novel approach called CompactifAI by Multiverse Computing, which uses quantum-inspired tensor networks to drastically compress LLMs with minimal loss in accuracy. "
+    tags: ["Quantum Inspired Tensor Networks", "Model Compression", "Machine Learning"]
+    content: "Bigger LLMs mean better performance. This has led to an arms race for more parameters, more data, and more compute. "
+    link: "https://medium.com/@prxshetty/are-llms-needlessly-huge-extreme-compression-of-llms-using-quantum-inspired-tensor-networks-11d8d24f8ef9"
+
+  - title: "How AI Models Train on Private Data Without Accessing It: Federated Learning Explained"
+    date: "2025-08-16"
+    summary: "Federated Learning (FL) enables AI models to be trained on distributed data without centralizing sensitive information. Instead of collecting data in one location, FL sends model copies to local devices where they train on private data."
+    tags: ["Federated Learning", "Distributed Computing", "Machine Learning", "Block Chain"]
+    content: "We get a lot of data from phones, cars, and smart sensors every day. This data is useful for training machine learning models. The old way was to send all this data to a central server for training."
+    link: "https://medium.com/@prxshetty/how-ai-models-train-on-private-data-without-accessing-it-federated-learning-explained-7b6f9c070f44"
+
+  - title: "Can LLMs really do web research? (and why your agent still gets stuck)"
+    date: "2025-08-09"
+    summary: "Despite impressive capabilities in simple tasks, current AI agents consistently fail at complex, multi-step web research that requires strategic thinking, source validation, and adaptive methodologies."
+    tags: ["ReAct", "Deep Research", "Thinking LLMs", "Promps"]
+    content: "When agents fail, they don’t fail randomly. The breakdowns tend to cluster around a few stages — searching, page selection, extracting facts from pages, updating strategy, reconciling ..."
+    link: "https://medium.com/@prxshetty/can-llms-really-do-web-research-and-why-your-agent-still-gets-stuck-d74598b44e45"
+
+
+  - title: "How I built a Swarm of AI Agents with LangChain"
+    date: "2025-03-18"
+    summary: "This blog explains in detail how I built my project during the weekend (which you can too!), an Emergency Travel Response System."
+    tags: ["LangChain", "LangGraph", "LangSmith", "OpenAI"]
+    content: "The emergency response process starts when a user provides input describing their emergency situation. This input could be a text message, voice input, or any other form of communication."
+    link: "https://medium.com/@prxshetty/how-i-built-a-swarm-of-ai-agents-with-langchain-2e0916ce0d38"
+
+  - title: "Why AI Still Forgets — And How We're Fixing It"
+    date: "2025-03-04"
+    summary: "Hey everyone! So, you know how Large Language Models (LLMs) sometimes seem a bit… forgetful?"
+    tags: ["LLM", "Research", "architecture"]
+    content: "Scribe, ElevenLabs' breakthrough AI transcription model, sets a new benchmark in accuracy and efficiency for speech-to-text technology..."
+    link: "https://medium.com/@prxshetty/why-ai-still-forgets-and-how-were-fixing-it-7d3597f02638"
+
+  - title: "Scribe, the Most Advanced AI Transcription Model Yet"
+    date: "2025-03-01"
+    summary: "Scribe, ElevenLabs' first Speech to Text model, is the world's most accurate transcription model."
+    tags: ["AI", "Transcription", "Speech to Text"]
+    content: "Scribe, ElevenLabs' breakthrough AI transcription model, sets a new benchmark in accuracy and efficiency for speech-to-text technology..."
+    link: "https://medium.com/@prxshetty/scribe-the-most-advanced-ai-transcription-model-yet-d5cd7f96368d"
+
+  - title: "Grok 3: The AI That Could Challenge DeepSeek and OpenAI's Best"
+    date: "2025-02-18"
+    summary: "Elon Musk and his team showcased Grok 3, an AI model with state-of-the-art reasoning and problem-solving skills."
+    tags: ["AI", "Grok 3", "OpenAI"]
+    content: "On X (formerly Twitter), Elon Musk revealed Grok 3's impressive capabilities. Could this be the next major contender in AI?"
+    link: "https://medium.com/@prxshetty/grok-3-the-ai-that-could-challenge-deepseek-and-openais-best-e20b3f8ad5e2"
+
+  - title: "Want to Master Open-Source LLMs in 2025? Start with DeepSeek V3"
+    date: "2025-01-05"
+    summary: "DeepSeek V3 is making waves in AI with its 671B parameters and groundbreaking architecture."
+    tags: ["LLMs", "AI", "Deep Learning"]
+    content: "Meet DeepSeek V3 — the AI powerhouse that's turning heads in Silicon Valley with its massive scale and innovative features..."
+    link: "https://medium.com/@prxshetty/want-to-master-open-source-llms-in-2025-start-with-deepseek-v3-f485d45a6387"
+
+  - title: "AI Benchmarks: Are we measuring the right thing?"
+    date: "2025-01-01"
+    summary: "Are AI benchmarks truly representative of real-world performance, or are they misleading our understanding?"
+    tags: ["AI", "Benchmarks", "Machine Learning"]
+    content: "What if the metrics we rely on to evaluate AI models are flawed? This article explores the limitations of current benchmarking methods..."
+    link: "https://medium.com/@prxshetty/ai-benchmarks-are-we-measuring-the-right-thing-1b601fcc0e4e"
+
+  - title: "Forget SQL Headaches: Learn How to Convert Schemas"
+    date: "2024-12-04"
+    summary: "A step-by-step guide to transitioning from relational databases to graph databases for better performance and scalability."
+    tags: ["Databases", "GraphQL", "SQL"]
+    content: "Transitioning from SQL to a graph database can be daunting. Here's a simple guide to make the process smooth and efficient..."
+    link: "https://medium.com/@prxshetty/forget-sql-headaches-learn-how-to-convert-schemas-to-a-graph-database-today-b78c144716ec"
+
+  - title: "Claude can now use computers..."
+    date: "2024-12-03"
+    summary: "Anthropic's Claude 3.5 Sonnet AI now interacts with computers just like humans."
+    tags: ["AI", "Claude", "Anthropic"]
+    content: "What if your AI assistant could navigate a computer like you? With its latest update, Claude 3.5 Sonnet takes AI assistance to the next level..."
+    link: "https://medium.com/@prxshetty/claude-can-now-use-computers-9b056d1e0e8b"
+
+  - title: "Survey of Activation Functions and Initialization Methods"
+    date: "2024-09-09"
+    summary: "A research-backed exploration of activation functions and initialization techniques in deep learning."
+    tags: ["Deep Learning", "Neural Networks", "AI Research"]
+    content: "Kicking off a new research series, this article breaks down activation functions and their impact on training stability..."
+    link: "https://medium.com/@prxshetty/paper-analysis-01-a-survey-on-activation-functions-and-their-relation-with-xavier-and-he-normal-01a64dff5c16"
