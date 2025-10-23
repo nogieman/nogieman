@@ -1,6 +1,6 @@
 baseURL = "nogieman.github.io/"
 languageCode = 'en-us'
-title = 'Pranam Shetty'
+title = 'Lalith Chandra'
 theme = 'hugo-noir'
 
 # URL handling
@@ -14,7 +14,7 @@ defaultContentLanguageInSubdir = true
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Pranam Shetty"
+    title = "Lalith Chandra"
     weight = 1
     contentDir = "content/en"
     [languages.en.menu]
@@ -66,7 +66,7 @@ defaultContentLanguageInSubdir = true
   #       weight = 5
   [languages.fr]
     languageName = "Français"
-    title = "Pranam Shetty"
+    title = "Lalith Chandra"
     weight = 3
     contentDir = "content/fr"
     [languages.fr.menu]
@@ -98,34 +98,34 @@ defaultContentLanguageInSubdir = true
 
 [params]
 # Basic profile information - common across languages
-name = "Pranam Shetty"
+name = "Lalith Chandra"
 profile_image = "/images/profile.jpg"
-discord = "prxshetty"
-github = "https://github.com/prxshetty"
-github_username = "prxshetty"
-email = "ps9960@g.rit.edu"
-twitter = "https://www.twitter.com/prxshetty"
-twitter_username = "prxshetty"
-medium = "https://www.medium.com/@prxshetty"
-linkedin = "https://www.linkedin.com/in/prxshetty"
-linkedin_username = "prxshetty"
-instagram = "https://instagram.com/prxshetty"
-leetcode = "https://leetcode.com/rinzler26"
-leetcode_username = "rinzler26"
-monkeytype = "https://monkeytype.com/profile/prxshetty"
-monkeytype_username = "prxshetty"
-kaggle = "https://www.kaggle.com/prxshetty"
-kaggle_username = "prxshetty"
+# discord = "prxshetty"
+github = "https://github.com/nogieman"
+github_username = "nogieman"
+email = "lalithchandram@gmail.com"
+# twitter = "https://www.twitter.com/prxshetty"
+# twitter_username = "prxshetty"
+# medium = "https://www.medium.com/@prxshetty"
+linkedin = "https://www.linkedin.com/in/lalithchandra"
+linkedin_username = "lalithchandra"
+instagram = "https://instagram.com/nogieman.io"
+# leetcode = "https://leetcode.com/rinzler26"
+# leetcode_username = "rinzler26"
+# monkeytype = "https://monkeytype.com/profile/prxshetty"
+# monkeytype_username = "prxshetty"
+# kaggle = "https://www.kaggle.com/prxshetty"
+# kaggle_username = "prxshetty"
 
 [[params.honors]]
-institution = "K K Wagh Arts Commerce Science and Computer Science College"
-title = "Academic Topper"
-date = "March 2023"
+institution = "Rajiv Gandhi University of Knowledge Technologies, Basar"
+title = "Elected secretary of the University's Entrepreneurship Cell"
+date = "January 2024"
 
-[[params.honors]]
-institution = "Podar International School, Nashik"
-title = "Academic Excellence Award"
-date = "October 2017"
+# [[params.honors]]
+# institution = "Podar International School, Nashik"
+# title = "Academic Excellence Award"
+# date = "October 2017"
 
 [[params.certifications]]
 title = "AI Vector Search Professional"
