@@ -4,4 +4,4 @@ draft: false
 layout: "contact"
 ---
 
-You can contact me via Email, Discord, Twitter, or LinkedIn. I usually respond within a day.
+You can contact me via Email or LinkedIn. I usually respond within a few hours. I can't guarantee about insta DMs tho :)

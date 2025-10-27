@@ -1,6 +1,6 @@
 name: "Lalith Chandra"
 location: "Surat, Gujarat"
-description: "FPGA Developer. I am working on designing generalised ML hardware in verilog for computer vision models"
+description: "FPGA Developer. I'm working on designing generalised ML hardware in verilog for computer vision models"
 profile_image: "/images/profile.jpg"
 
 social:
@@ -29,19 +29,19 @@ honors:
     # title: "Academic Excellence Award"
     # date: "October 2017"
 
-certifications:
-  - title: "AI Vector Search Professional"
-    company: "Oracle"
-    date: "Feb 2025"
-    url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E5845422D7DE89C09337652BAF48826F0C6C9CB6FAA7B0FE9F8B1AF447FACAB9"
-  - title: "Generative AI Professional"
-    company: "Oracle"
-    date: "July 2024"
-    url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=5C2C44615B73F678DF85E44418348C3535ABCE032C9F7E82F196472434C80BCB"
-  - title: "AI Foundations Associate"
-    company: "Oracle"
-    date: "April 2025"
-    url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FDAC04F9FD0E2793459AAC3EE02DE9131DA3B7B34C20A361CAEFC71059B86EA8"
+# certifications:
+#   - title: ""
+#     company: "Oracle"
+#     date: "Feb 2025"
+#     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E5845422D7DE89C09337652BAF48826F0C6C9CB6FAA7B0FE9F8B1AF447FACAB9"
+#   - title: "Generative AI Professional"
+#     company: "Oracle"
+#     date: "July 2024"
+#     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=5C2C44615B73F678DF85E44418348C3535ABCE032C9F7E82F196472434C80BCB"
+#   - title: "AI Foundations Associate"
+#     company: "Oracle"
+#     date: "April 2025"
+#     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FDAC04F9FD0E2793459AAC3EE02DE9131DA3B7B34C20A361CAEFC71059B86EA8"
 
 voluntary:
   role: "Volunteer"

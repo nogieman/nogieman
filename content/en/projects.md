@@ -4,4 +4,4 @@ draft: false
 layout: "projects"
 ---
 
-Here are some of my recent projects that showcase my skills and interests in technology. 
+Here are a few of my projects that I think were kinda fun!
