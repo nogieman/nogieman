@@ -200,10 +200,10 @@
                 
             </nav>
             <div class="hidden md:flex justify-end items-center">
-                <div class="flex items-center">
-                    <span class="text-lg text-text-secondary-light dark:text-text-secondary-dark mr-2">Local Time:</span>
-                    <div id="local-time" class="text-lg text-text-secondary-light dark:text-text-secondary-dark"></div>
-                </div>
+                
+                
+                
+                
                 
                 <div class="language-switcher ml-4">
                     <div class="language-switcher-btn text-lg text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 p-2 rounded-md">
@@ -326,18 +326,18 @@
 
 <script>
     
-    function updateLocalTime() {
-        const timeElements = document.querySelectorAll('#local-time, #mobile-local-time');
-        timeElements.forEach(element => {
-            if (element) {
-                const now = new Date();
-                const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                element.textContent = timeString;
-            }
-        });
-    }
-    updateLocalTime();
-    setInterval(updateLocalTime, 1000);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -451,6 +451,7 @@
         }
     });
 </script> 
+
         <main>
             
 <div class="max-w-4xl mx-auto px-4 py-12">
@@ -474,7 +475,7 @@
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Honors & Awards</h2>
                 <div class="space-y-6">
                     
-                    <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+                    <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-none transition-all duration-300">
                         <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm prose">Rajiv Gandhi University of Knowledge Technologies, Basar</div>
                         <div class="flex items-center gap-2">
                             <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Elected secretary of the University&#39;s Entrepreneurship Cell</h3>
@@ -572,8 +573,8 @@
         <div class="border-t border-border-primary-light dark:border-border-primary-dark pt-5">
             <div class="flex flex-col items-center justify-center gap-2">
                                 
-                <p class="text-text-secondary-light dark:text-text-secondary-dark text-xm ">© 2025 Lalith Chandra</p>
-                <p class="text-text-secondary-light dark:text-text-secondary-dark text-xm pb-12">Built using <a href="https://gohugo.io/" target="_blank" class="animated-link text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark">Hugo</a>. Take a look at my <a href="https://github.com/nogieman" target="_blank" class="animated-link text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark">GitHub</a></p>
+                
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-xm pb-12">Built using <a href="https://gohugo.io/" target="_blank" class="animated-link text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark">Hugo</a>. <br> Chilling is the most democratic thing a human can do.</p>
             </div>
         </div>
     </div>
@@ -604,5 +605,6 @@
         background-color: #0ea5e9;  
     }
 </style> 
+
     </body>
 </html> 

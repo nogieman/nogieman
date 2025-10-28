@@ -77,10 +77,10 @@
                 {{ end }}
             </nav>
             <div class="hidden md:flex justify-end items-center">
-                <div class="flex items-center">
-                    <span class="text-lg text-text-secondary-light dark:text-text-secondary-dark mr-2">{{ T "localTimeLabel" }}</span>
-                    <div id="local-time" class="text-lg text-text-secondary-light dark:text-text-secondary-dark"></div>
-                </div>
+                <!-- <div class="flex items-center"> -->
+                <!--     <span class="text-lg text-text-secondary-light dark:text-text-secondary-dark mr-2">{{ T "localTimeLabel" }}</span> -->
+                <!--     <div id="local-time" class="text-lg text-text-secondary-light dark:text-text-secondary-dark"></div> -->
+                <!-- </div> -->
                 <!-- Language Switcher - Desktop -->
                 <div class="language-switcher ml-4">
                     <div class="language-switcher-btn text-lg text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 p-2 rounded-md">
@@ -177,18 +177,18 @@
 
 <script>
     // Time display function
-    function updateLocalTime() {
-        const timeElements = document.querySelectorAll('#local-time, #mobile-local-time');
-        timeElements.forEach(element => {
-            if (element) {
-                const now = new Date();
-                const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                element.textContent = timeString;
-            }
-        });
-    }
-    updateLocalTime();
-    setInterval(updateLocalTime, 1000);
+    <!-- function updateLocalTime() { -->
+    <!--     const timeElements = document.querySelectorAll('#local-time, #mobile-local-time'); -->
+    <!--     timeElements.forEach(element => { -->
+    <!--         if (element) { -->
+    <!--             const now = new Date(); -->
+    <!--             const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); -->
+    <!--             element.textContent = timeString; -->
+    <!--         } -->
+    <!--     }); -->
+    <!-- } -->
+    <!-- updateLocalTime(); -->
+    <!-- setInterval(updateLocalTime, 1000); -->
 
     // Mobile menu functionality
     const mobileMenuButton = document.getElementById('mobile-menu-button');
