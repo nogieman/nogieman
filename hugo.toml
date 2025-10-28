@@ -127,23 +127,23 @@ date = "January 2024"
 # title = "Academic Excellence Award"
 # date = "October 2017"
 
-[[params.certifications]]
-title = "AI Vector Search Professional"
-company = "Oracle"
-date = "Feb 2025"
-url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E5845422D7DE89C09337652BAF48826F0C6C9CB6FAA7B0FE9F8B1AF447FACAB9"
-
-[[params.certifications]]
-title = "Generative AI Professional"
-company = "Oracle"
-date = "July 2024"
-url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=5C2C44615B73F678DF85E44418348C3535ABCE032C9F7E82F196472434C80BCB"
-
-[[params.certifications]]
-title = "AI Foundations Associate"
-company = "Oracle"
-date = "April 2025"
-url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FDAC04F9FD0E2793459AAC3EE02DE9131DA3B7B34C20A361CAEFC71059B86EA8"
+# [[params.certifications]]
+# title = "AI Vector Search Professional"
+# company = "Oracle"
+# date = "Feb 2025"
+# url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E5845422D7DE89C09337652BAF48826F0C6C9CB6FAA7B0FE9F8B1AF447FACAB9"
+#
+# [[params.certifications]]
+# title = "Generative AI Professional"
+# company = "Oracle"
+# date = "July 2024"
+# url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=5C2C44615B73F678DF85E44418348C3535ABCE032C9F7E82F196472434C80BCB"
+#
+# [[params.certifications]]
+# title = "AI Foundations Associate"
+# company = "Oracle"
+# date = "April 2025"
+# url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FDAC04F9FD0E2793459AAC3EE02DE9131DA3B7B34C20A361CAEFC71059B86EA8"
 
 [[params.voluntary]]
 role = "Volunteer"
