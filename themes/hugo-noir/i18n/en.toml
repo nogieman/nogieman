@@ -25,6 +25,6 @@ other = "Learn More"
 [builtUsing]
 other = "Built using"
 
-[takeALookAtMy]
-other = "Take a look at my" 
+# [takeALookAtMy]
+# other = "Take a look at my" 
 
