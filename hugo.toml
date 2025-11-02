@@ -32,7 +32,7 @@ defaultContentLanguageInSubdir = true
         weight = 3
       [[languages.en.menu.main]]
         name = "Blogs"
-        pageRef = "/blog"
+        url = "/blog/"
         weight = 4
       [[languages.en.menu.main]]
         name = "Contact"
