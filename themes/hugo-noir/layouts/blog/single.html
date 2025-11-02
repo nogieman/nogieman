@@ -1,0 +1,31 @@
+
+{{ define "main" }}
+<div class="w-3/4 max-w-5xl mx-auto py-12 px-4">
+    <h1 class="text-4xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+    {{ if eq .Section "blogs" }}
+        <div class="flex flex-wrap items-center gap-4 mb-10 text-text-secondary-light dark:text-text-secondary-dark">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <div class="flex flex-wrap gap-2">
+                {{ range .Params.tags }}
+                <span class="px-3 py-1 bg-bg-primary-light dark:bg-bg-tertiary-dark rounded-md text-xs font-medium">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+    <div class="prose dark:prose-invert max-w-none leading-relaxed">
+        <style>
+            .prose a {
+                color: #60a5fa; /* light blue (Tailwind blue-400) */
+                text-decoration: underline;
+                transition: color 0.2s ease;
+            }
+            .prose a:hover {
+                color: #3b82f6; /* Tailwind blue-500 on hover */
+            }
+        </style>
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,176 @@
+.
+├── archetypes
+│   └── default.md
+├── content
+│   ├── en
+│   │   ├── about.md
+│   │   ├── blogs.md
+│   │   ├── contact.md
+│   │   ├── experience.md
+│   │   └── projects.md
+│   ├── es
+│   │   ├── about.md
+│   │   ├── blogs.md
+│   │   ├── contact.md
+│   │   ├── experience.md
+│   │   └── projects.md
+│   └── fr
+│       ├── about.md
+│       ├── blogs.md
+│       ├── contact.md
+│       ├── experience.md
+│       └── projects.md
+├── data
+│   ├── en
+│   │   ├── author.yaml
+│   │   ├── blogs.yaml
+│   │   ├── experience.yaml
+│   │   └── projects.yaml
+│   ├── es
+│   │   ├── author.yaml
+│   │   ├── blogs.yaml
+│   │   ├── experience.yaml
+│   │   └── projects.yaml
+│   └── fr
+│       ├── author.yaml
+│       ├── blogs.yaml
+│       ├── experience.yaml
+│       └── projects.yaml
+├── download_images.sh
+├── go.mod
+├── go.sum
+├── hugo.toml
+├── public
+│   ├── CNAME
+│   ├── en
+│   │   ├── about
+│   │   │   └── index.html
+│   │   ├── blogs
+│   │   │   └── index.html
+│   │   ├── categories
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   ├── contact
+│   │   │   └── index.html
+│   │   ├── experience
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   ├── projects
+│   │   │   └── index.html
+│   │   ├── sitemap.xml
+│   │   └── tags
+│   │       ├── index.html
+│   │       └── index.xml
+│   ├── favicon_io
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   └── site.webmanifest
+│   ├── fr
+│   │   ├── about
+│   │   │   └── index.html
+│   │   ├── blogs
+│   │   │   └── index.html
+│   │   ├── categories
+│   │   │   ├── index.html
+│   │   │   └── index.xml
+│   │   ├── contact
+│   │   │   └── index.html
+│   │   ├── experience
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   ├── projects
+│   │   │   └── index.html
+│   │   ├── sitemap.xml
+│   │   └── tags
+│   │       ├── index.html
+│   │       └── index.xml
+│   ├── images
+│   │   ├── company
+│   │   │   └── Vicharak.png
+│   │   ├── profile.jpg
+│   │   └── projects
+│   │       ├── automail_ai.png
+│   │       ├── depth-seg.png
+│   │       ├── hugo-noir.png
+│   │       ├── image_enhance.png
+│   │       ├── jobtrail.png
+│   │       ├── llm-chatbot.png
+│   │       ├── llm-scratch.jpg
+│   │       ├── lumi.png
+│   │       ├── nba_predictor.png
+│   │       ├── nyc_parks.jpg
+│   │       └── swarm_lang2.png
+│   ├── index.html
+│   └── sitemap.xml
+├── README.md
+├── static
+│   ├── CNAME
+│   ├── favicon_io
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   └── site.webmanifest
+│   └── images
+│       ├── company
+│       │   └── Vicharak.png
+│       ├── profile.jpg
+│       └── projects
+│           ├── automail_ai.png
+│           ├── depth-seg.png
+│           ├── hugo-noir.png
+│           ├── image_enhance.png
+│           ├── jobtrail.png
+│           ├── llm-chatbot.png
+│           ├── llm-scratch.jpg
+│           ├── lumi.png
+│           ├── nba_predictor.png
+│           ├── nyc_parks.jpg
+│           └── swarm_lang2.png
+├── structure.log
+└── themes
+    └── hugo-noir
+        ├── assets
+        │   └── css
+        │       └── main.css
+        ├── config.toml
+        ├── i18n
+        │   ├── en.toml
+        │   ├── es.toml
+        │   └── fr.toml
+        ├── images
+        │   ├── contact.png
+        │   ├── experience.png
+        │   ├── project.png
+        │   ├── screenshot.png
+        │   └── tn.png
+        ├── layouts
+        │   ├── _default
+        │   │   ├── about.html
+        │   │   ├── baseof.html
+        │   │   ├── blogs.html
+        │   │   ├── contact.html
+        │   │   ├── experience.html
+        │   │   ├── list.html
+        │   │   ├── projects.html
+        │   │   ├── single.html
+        │   │   ├── taxonomy.html
+        │   │   └── terms.html
+        │   ├── index.html
+        │   └── partials
+        │       ├── footer.html
+        │       └── header.html
+        ├── package-lock.json
+        ├── README.md
+        ├── tailwind.config.js
+        └── theme.toml
+
+45 directories, 129 files

@@ -15,16 +15,6 @@
                 />
   </url><url>
     <loc>//localhost:1313/fr/blogs/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/en/blogs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/blogs/"
-                />
   </url><url>
     <loc>//localhost:1313/fr/categories/</loc>
     <xhtml:link

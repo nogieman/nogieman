@@ -32,7 +32,7 @@ defaultContentLanguageInSubdir = true
         weight = 3
       [[languages.en.menu.main]]
         name = "Blogs"
-        pageRef = "/blogs"
+        pageRef = "/blog"
         weight = 4
       [[languages.en.menu.main]]
         name = "Contact"
@@ -84,7 +84,7 @@ defaultContentLanguageInSubdir = true
         weight = 3
       [[languages.fr.menu.main]]
         name = "Blogs"
-        pageRef = "/blogs"
+        pageRef = "/blog"
         weight = 4
       [[languages.fr.menu.main]]
         name = "Contact"
@@ -146,10 +146,10 @@ date = "January 2024"
 # url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FDAC04F9FD0E2793459AAC3EE02DE9131DA3B7B34C20A361CAEFC71059B86EA8"
 
 [[params.voluntary]]
-role = "Volunteer"
-organization = "Bunts Sangha"
-period = "2009 - Present"
-description = "As a volunteer at Bunts Sangha Nashik, I tutored students, prepared study materials, organized festivals and traditional performances, visited elderly to promote community unity, and coordinated fundraising campaigns."
+role = "Secretary"
+organization = "Entrepreneurship Cell, RGUKT Basar"
+period = "Jan 2024 - Jan 2025"
+description = "Scaled up the organisation throught various batches of the University, laid Foundational plans for an on-campus incubation centre."
 
 # Main menu (used as fallback if language-specific menu is not defined)
 [menu]
@@ -167,7 +167,7 @@ description = "As a volunteer at Bunts Sangha Nashik, I tutored students, prepar
     weight = 3
   [[menu.main]]
     name = "Blogs"
-    pageRef = "/blogs"
+    url = "/blog/"
     weight = 4
   [[menu.main]]
     name = "Contact Me"

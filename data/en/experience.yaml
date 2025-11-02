@@ -11,8 +11,20 @@ experience:
       - "Develop and test Verilog-based accelerator compute blocks for Efinix Trion T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
       - "Benchmark FPGA inference performance against software simulations and optimize for throughput and accuracy"
 
-  # - company: "Marva.ai"
-  #   company_link: "https://ai.marva.in/"
+  - company: "National Institute of Technology, Delhi"
+    company_link: ""
+    role: "VLSI Research Intern"
+    period: "May 2024 - July 2024"
+    country: "India"
+    logo: ""
+    description: "Designing and testing RTL for accelerating Computer Vision models for edge computing on FPGA."
+    responsibilities:
+      - "Designing and debugging custom RTL blocks for computer vision and neural network acceleration."
+      - "Develop and test Verilog-based accelerator compute blocks for Efinix Trion T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
+      - "Benchmark FPGA inference performance against software simulations and optimize for throughput and accuracy"
+
+  # - company: "Entrepreneurship Cell, RGUKT Basar"
+  #   company_link: ""
   #   role: "ML Engineer Intern"
   #   period: "June 2023 - Aug 2023"
   #   country: "India"

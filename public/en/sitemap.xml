@@ -2,6 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/en/tags/ai/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/en/blog/blogex/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/en/blog/second/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/en/blog/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/en/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="//localhost:1313/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/en/"
+                />
+  </url><url>
+    <loc>//localhost:1313/en/tags/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="//localhost:1313/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/en/tags/"
+                />
+  </url><url>
+    <loc>//localhost:1313/en/tags/transformers/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/en/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -12,18 +53,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/en/about/"
-                />
-  </url><url>
-    <loc>//localhost:1313/en/blogs/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/blogs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/en/blogs/"
                 />
   </url><url>
     <loc>//localhost:1313/en/categories/</loc>
@@ -62,18 +91,6 @@
                 href="//localhost:1313/en/experience/"
                 />
   </url><url>
-    <loc>//localhost:1313/en/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/en/"
-                />
-  </url><url>
     <loc>//localhost:1313/en/projects/</loc>
     <xhtml:link
                 rel="alternate"
@@ -84,18 +101,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/en/projects/"
-                />
-  </url><url>
-    <loc>//localhost:1313/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/en/tags/"
                 />
   </url>
 </urlset>
