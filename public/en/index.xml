@@ -20,7 +20,7 @@
       <link>//localhost:1313/en/blog/second/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/en/blog/second/</guid>
-      <description>&lt;p&gt;Another one&lt;/p&gt;&#xA;&lt;h1 id=&#34;vehicle-and-license-plate-detection-with-yolov8&#34;&gt;Vehicle and License Plate Detection with YOLOv8&lt;/h1&gt;&#xA;&lt;p&gt;This repo includes the main project and the training module for the YOLOv8 model with custom dataset. The training file has to be edited to fit the proper location of data.yaml file and the dataset location.&#xA;The project combines YOLOv8 for vehicle and license plate detection with the SORT (Simple Online and real-time tracking) algorithm for vehicle tracking. It detects vehicles in a video stream using YOLOv8, tracks them across frames with SORT, and identifies license plates using another YOLOv5 model trained specifically for license plate detection. The project is implemented in Python using PyTorch and OpenCV.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Another one for testing&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>

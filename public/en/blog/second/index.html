@@ -467,61 +467,7 @@
                 color: #3b82f6;  
             }
         </style>
-        <p>Another one</p>
-<h1 id="vehicle-and-license-plate-detection-with-yolov8">Vehicle and License Plate Detection with YOLOv8</h1>
-<p>This repo includes the main project and the training module for the YOLOv8 model with custom dataset. The training file has to be edited to fit the proper location of data.yaml file and the dataset location.
-The project combines YOLOv8 for vehicle and license plate detection with the SORT (Simple Online and real-time tracking) algorithm for vehicle tracking. It detects vehicles in a video stream using YOLOv8, tracks them across frames with SORT, and identifies license plates using another YOLOv5 model trained specifically for license plate detection. The project is implemented in Python using PyTorch and OpenCV.</p>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="https://github.com/ultralytics/yolov8">Ultralytics YOLO</a></li>
-<li><a href="https://pytorch.org/">PyTorch</a></li>
-<li><a href="https://numpy.org/">NumPy</a></li>
-<li><a href="https://github.com/abewley/sort">SORT (Simple Online and Realtime Tracking)</a></li>
-<li><a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a></li>
-<li><a href="https://opencv.org/">OpenCV</a></li>
-</ul>
-<h2 id="overview">Overview</h2>
-<p>The project performs the following tasks:</p>
-<ol>
-<li>
-<p><strong>Vehicle Detection</strong>: Uses a pre-trained YOLOv8 model to detect vehicles in a video stream. It draws bounding boxes around the detected vehicles.</p>
-</li>
-<li>
-<p><strong>Vehicle Tracking</strong>: Utilizes the SORT algorithm to track the detected vehicles across frames. It assigns unique IDs to each detected vehicle for tracking.</p>
-</li>
-<li>
-<p><strong>License Plate Detection</strong>: Employs a custom-trained YOLOv8 model specifically for license plate detection to identify license plates on the detected vehicles. It draws bounding boxes around the license plates and displays the recognized license plate numbers.</p>
-</li>
-<li>
-<p><strong>License Plate Recognition</strong>: Utilizes EasyOCR to perform Optical Character Recognition (OCR) on the detected license plates and extract the alphanumeric characters. The OCR_Use file is specified with the pattern of the Indian License plate.</p>
-</li>
-<li>
-<p><strong>Output Video</strong>: Writes the processed frames with bounding boxes and license plate numbers to an output video file.</p>
-</li>
-</ol>
-<h2 id="usage">Usage</h2>
-<ol>
-<li>
-<p><strong>Setup</strong>: Install the required dependencies mentioned above.</p>
-</li>
-<li>
-<p><strong>Download Pre-trained Models</strong>: Download the pre-trained YOLOv8 models for vehicle detection and license plate detection.</p>
-</li>
-<li>
-<p><strong>Run the Code</strong>: Execute the provided Python script in a suitable environment, ensuring the availability of GPU for optimal performance.</p>
-</li>
-<li>
-<p><strong>Input Video</strong>: Provide the path to the input video file for vehicle and license plate detection.</p>
-</li>
-<li>
-<p><strong>Output Video</strong>: Specify the name and location for the output video file.</p>
-</li>
-<li>
-<p><strong>Visualization</strong>: Visualize the vehicle detection, tracking, and license plate recognition results in the output video.</p>
-</li>
-</ol>
-<h2 id="results">Results</h2>
-<p>The project achieves accurate vehicle detection, tracking, and license plate recognition in real-time video streams. It provides a valuable tool for various applications, including traffic monitoring, parking management, and law enforcement.</p>
+        <p>Another one for testing</p>
 
     </div>
 </div>
