@@ -2,90 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/nogieman/fr/about/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/about/"
+                href="https://nogieman.github.io/nogieman/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/about/"
+                href="https://nogieman.github.io/nogieman/fr/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/blogs/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/blogs/</loc>
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/categories/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/categories/"
+                href="https://nogieman.github.io/nogieman/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/categories/"
+                href="https://nogieman.github.io/nogieman/fr/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/contact/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/contact/"
+                href="https://nogieman.github.io/nogieman/en/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/contact/"
+                href="https://nogieman.github.io/nogieman/fr/contact/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/experience/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/experience/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/experience/"
+                href="https://nogieman.github.io/nogieman/en/experience/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/experience/"
+                href="https://nogieman.github.io/nogieman/fr/experience/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/"
+                href="https://nogieman.github.io/nogieman/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/"
+                href="https://nogieman.github.io/nogieman/fr/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/projects/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/projects/"
+                href="https://nogieman.github.io/nogieman/en/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/projects/"
+                href="https://nogieman.github.io/nogieman/fr/projects/"
                 />
   </url><url>
-    <loc>http://localhost:1313/nogieman/fr/tags/</loc>
+    <loc>https://nogieman.github.io/nogieman/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/nogieman/en/tags/"
+                href="https://nogieman.github.io/nogieman/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/nogieman/fr/tags/"
+                href="https://nogieman.github.io/nogieman/fr/tags/"
                 />
   </url>
 </urlset>
