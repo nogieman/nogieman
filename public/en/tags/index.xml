@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lalith Chandra</title>
-    <link>http://localhost:1313/nogieman/en/tags/</link>
+    <link>http://localhost:1313/en/tags/</link>
     <description>Recent content in Tags on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/nogieman/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/nogieman/en/tags/ai/</link>
+      <link>http://localhost:1313/en/tags/ai/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/tags/ai/</guid>
+      <guid>http://localhost:1313/en/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Transformers</title>
-      <link>http://localhost:1313/nogieman/en/tags/transformers/</link>
+      <link>http://localhost:1313/en/tags/transformers/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/tags/transformers/</guid>
+      <guid>http://localhost:1313/en/tags/transformers/</guid>
       <description></description>
     </item>
   </channel>
