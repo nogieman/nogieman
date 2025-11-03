@@ -1,4 +1,4 @@
-baseURL = "https://nogieman.github.io/"
+baseURL = "https://nogieman.github.io/nogieman/"
 languageCode = 'en-us'
 title = 'Lalith Chandra'
 theme = 'hugo-noir'
