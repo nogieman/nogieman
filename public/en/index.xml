@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lalith Chandra</title>
-    <link>http://localhost:1313/nogieman/en/en/</link>
+    <link>http://localhost:1313/nogieman/en/</link>
     <description>Recent content on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/nogieman/en/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/nogieman/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attention Is Not All You Need. It&#39;s How You Need It.</title>
-      <link>http://localhost:1313/nogieman/en/en/blog/blogex/</link>
+      <link>http://localhost:1313/nogieman/en/blog/blogex/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/blog/blogex/</guid>
+      <guid>http://localhost:1313/nogieman/en/blog/blogex/</guid>
       <description>&lt;p&gt;In 2017, the paper &lt;em&gt;Attention Is All You Need&lt;/em&gt; launched a revolution&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Exaaampleeee&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attention Is Not All You Need. It&#39;s How You Need It.</title>
-      <link>http://localhost:1313/nogieman/en/en/blog/second/</link>
+      <link>http://localhost:1313/nogieman/en/blog/second/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/blog/second/</guid>
+      <guid>http://localhost:1313/nogieman/en/blog/second/</guid>
       <description>&lt;p&gt;Another one for testing&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/nogieman/en/en/about/</link>
+      <link>http://localhost:1313/nogieman/en/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/about/</guid>
+      <guid>http://localhost:1313/nogieman/en/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m someone who&amp;rsquo;s curious about astrophysics, tech and highly interested in social justice and climate change.&lt;/p&gt;&#xA;&lt;p&gt;This portfolio mostly consists of my techie side, with a hint of other stuff as well in an (as you&amp;rsquo;ve already figured out) extremely informal tone.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently working as an FPGA Developer, exploring various ways and applications of reconfigurable edge ML acceleration.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact Me</title>
-      <link>http://localhost:1313/nogieman/en/en/contact/</link>
+      <link>http://localhost:1313/nogieman/en/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/contact/</guid>
+      <guid>http://localhost:1313/nogieman/en/contact/</guid>
       <description>&lt;p&gt;You can contact me via Email or LinkedIn. I usually respond within a few hours. I can&amp;rsquo;t guarantee about insta DMs tho :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Experience</title>
-      <link>http://localhost:1313/nogieman/en/en/experience/</link>
+      <link>http://localhost:1313/nogieman/en/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/experience/</guid>
+      <guid>http://localhost:1313/nogieman/en/experience/</guid>
       <description>&lt;p&gt;Considering my heavy curiosity towards Tech, Mathematics and my sheer passion for Astrophysics since childhood, I&amp;rsquo;ve tilted my career towards RTL Design. I and tinkered with everything I could find during my undergrad, and my list of &amp;lsquo;Stuff that I love to to&amp;rsquo; only grew as I explored more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>http://localhost:1313/nogieman/en/en/projects/</link>
+      <link>http://localhost:1313/nogieman/en/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nogieman/en/en/projects/</guid>
+      <guid>http://localhost:1313/nogieman/en/projects/</guid>
       <description>&lt;p&gt;Here are a few of my projects that I think were kinda fun!&lt;/p&gt;</description>
     </item>
   </channel>
