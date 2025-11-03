@@ -2,105 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/tags/ai/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/tags/ai/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/blog/blogex/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/blog/blogex/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/blog/second/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/blog/second/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/blog/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/blog/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
-    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
+                href="http://localhost:1313/nogieman/en/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="http://localhost:1313/nogieman/en/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/transformers/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/tags/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/nogieman/en/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/nogieman/en/en/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/nogieman/en/en/tags/transformers/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/about/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/about/"
+                href="http://localhost:1313/nogieman/en/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/"
+                href="http://localhost:1313/nogieman/en/en/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
+                href="http://localhost:1313/nogieman/en/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="http://localhost:1313/nogieman/en/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/contact/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/contact/"
+                href="http://localhost:1313/nogieman/en/fr/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/contact/"
+                href="http://localhost:1313/nogieman/en/en/contact/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/experience/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/experience/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/experience/"
+                href="http://localhost:1313/nogieman/en/fr/experience/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/experience/"
+                href="http://localhost:1313/nogieman/en/en/experience/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/projects/</loc>
+    <loc>http://localhost:1313/nogieman/en/en/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/projects/"
+                href="http://localhost:1313/nogieman/en/fr/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/projects/"
+                href="http://localhost:1313/nogieman/en/en/projects/"
                 />
   </url>
 </urlset>
