@@ -5,7 +5,7 @@ experience:
     period: "June 2025 - Present"
     country: "India"
     logo: "/images/company/vicharak.png"
-    description: "Designing and testing RTL for accelerating Computer Vision models for edge computing on FPGA."
+    description: "Designing and testing RTL to accelerate Computer Vision models for edge computing on FPGA."
     responsibilities:
       - "Designing and debugging custom RTL blocks for computer vision and neural network acceleration."
       - "Develop and test Verilog-based accelerator compute blocks for Efinix Trion T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
@@ -17,11 +17,11 @@ experience:
     period: "May 2024 - July 2024"
     country: "India"
     logo: ""
-    description: "Designing and testing RTL for accelerating Computer Vision models for edge computing on FPGA."
+    description: "Research Approximate computing circuits compatible for MAC units."
     responsibilities:
-      - "Designing and debugging custom RTL blocks for computer vision and neural network acceleration."
-      - "Develop and test Verilog-based accelerator compute blocks for Efinix Trion T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
-      - "Benchmark FPGA inference performance against software simulations and optimize for throughput and accuracy"
+      - "Built an approximate image multiplier for intensive ML applications."
+      - "Performed ASIC Design flow (RTL to GDS-II) with 90nm and 180nm technologies."
+      - ""
 
   # - company: "Entrepreneurship Cell, RGUKT Basar"
   #   company_link: ""
