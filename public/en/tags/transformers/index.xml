@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transformers on Lalith Chandra</title>
-    <link>https://nogieman.github.io/en/tags/transformers/</link>
+    <link>http://localhost:1313/en/tags/transformers/</link>
     <description>Recent content in Transformers on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nogieman.github.io/en/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attention Is Not All You Need. It&#39;s How You Need It.</title>
-      <link>https://nogieman.github.io/en/blog/blogex/</link>
+      <link>http://localhost:1313/en/blog/blogex/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/blog/blogex/</guid>
+      <guid>http://localhost:1313/en/blog/blogex/</guid>
       <description>&lt;p&gt;In 2017, the paper &lt;em&gt;Attention Is All You Need&lt;/em&gt; launched a revolution&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Exaaampleeee&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attention Is Not All You Need. It&#39;s How You Need It.</title>
-      <link>https://nogieman.github.io/en/blog/second/</link>
+      <link>http://localhost:1313/en/blog/second/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/blog/second/</guid>
+      <guid>http://localhost:1313/en/blog/second/</guid>
       <description>&lt;p&gt;Another one for testing&lt;/p&gt;</description>
     </item>
   </channel>

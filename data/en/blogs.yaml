@@ -1,10 +1,10 @@
 blogs:
-  - title: "Attention Is Not All You Need. It's How You Need It."
-    date: "2025-09-07"
-    summary: "Jet-Nemotron rethinks AI by using attention only when necessary, dramatically boosting speed and accuracy compared to traditional full-attention models."
-    tags: ["Transformers", "Attention Mechanisms", "AI Architecture", "Neural Networks", "Machine Learning"]
-    content: "In 2017, the paper 'Attention Is All You Need' launched a revolution. It provided the Transformer, the architectural foundation behind almost all cutting-edge language models since its inception."
-    link: "https://medium.com/@prxshetty/attention-is-not-all-you-need-its-how-you-need-it-ecae47ce04b1"
+  - title: "Coming Soon"
+    date: "2025-11-07"
+    summary: ""
+    tags: []
+    content: ""
+    link: ""
 
   # - title: "Are LLMs Needlessly Huge? Extreme Compression of LLMs using Quantum Inspired Tensor Networks"
   #   date: "2025-08-23"

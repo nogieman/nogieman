@@ -1,8 +1,8 @@
 projects:
-  - title: "License Plate Recognition for Smart Vehicle systems"
+  - title: "LPR for Smart Vehicle systems"
     description: "This  is my contribution to a bigger project, providing a real-time communication strategy for smart vehicles."
-    tech: "TensorFlow, Pytorch, Cocotb, Roboflow, EasyOCR, OpenCV, Ultralytic's models"
-    image: "/images/projects/hugo-noir.png"
+    tech: "TensorFlow, Pytorch, Cocotb, Roboflow, EasyOCR, OpenCV"
+    image: "/images/projects/LPR.png"
     link: "https://github.com/nogieman/LPR-with-YOLOv8.git"
     
   - title: "Emergency Travel Response System"
