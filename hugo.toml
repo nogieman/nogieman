@@ -64,32 +64,32 @@ defaultContentLanguageInSubdir = true
   #       name = "Contacto"
   #       pageRef = "/contact"
   #       weight = 5
-  [languages.fr]
-    languageName = "Français"
-    title = "Lalith Chandra"
-    weight = 3
-    contentDir = "content/fr"
-    [languages.fr.menu]
-      [[languages.fr.menu.main]]
-        name = "À Propos"
-        pageRef = "/about"
-        weight = 1
-      [[languages.fr.menu.main]]
-        name = "Expérience"
-        pageRef = "/experience"
-        weight = 2
-      [[languages.fr.menu.main]]
-        name = "Projets"
-        pageRef = "/projects"
-        weight = 3
-      [[languages.fr.menu.main]]
-        name = "Blogs"
-        pageRef = "/blog"
-        weight = 4
-      [[languages.fr.menu.main]]
-        name = "Contact"
-        pageRef = "/contact"
-        weight = 5
+  # [languages.fr]
+  #   languageName = "Français"
+  #   title = "Lalith Chandra"
+  #   weight = 3
+  #   contentDir = "content/fr"
+  #   [languages.fr.menu]
+  #     [[languages.fr.menu.main]]
+  #       name = "À Propos"
+  #       pageRef = "/about"
+  #       weight = 1
+  #     [[languages.fr.menu.main]]
+  #       name = "Expérience"
+  #       pageRef = "/experience"
+  #       weight = 2
+  #     [[languages.fr.menu.main]]
+  #       name = "Projets"
+  #       pageRef = "/projects"
+  #       weight = 3
+  #     [[languages.fr.menu.main]]
+  #       name = "Blogs"
+  #       pageRef = "/blog"
+  #       weight = 4
+  #     [[languages.fr.menu.main]]
+  #       name = "Contact"
+  #       pageRef = "/contact"
+  #       weight = 5
 
 # Taxonomy configuration
 [taxonomies]
