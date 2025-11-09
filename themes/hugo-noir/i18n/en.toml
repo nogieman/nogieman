@@ -4,8 +4,8 @@
 [experienceTitle]
 other = "Experience"
 
-[projectsTitle]
-other = "Projects"
+# [projectsTitle]
+# other = "Projects"
 
 [blogsTitle]
 other = "Blogs"

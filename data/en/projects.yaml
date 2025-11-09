@@ -5,11 +5,11 @@ projects:
     image: "/images/projects/LPR.png"
     link: "https://github.com/nogieman/LPR-with-YOLOv8.git"
     
-  - title: "Emergency Travel Response System"
-    description: "A sophisticated multi-agent system leveraging LangGraph's Swarm architecture, LangSmith and OpenAI to coordinate emergency travel assistance through specialized AI agents. Features multi-agent collaboration, real-time monitoring and modular architecture."
-    tech: "Python, LangChain, LangSmith, LangGraph, OpenAI API"
-    image: "/images/projects/swarm_lang2.png"
-    link: "https://github.com/prxshetty/emergency-travel-orchestrator"
+  - title: "Approximate Adders for MAC units in Image Processing ASICs"
+    description: "High-speed, low-power Approximate adders for Image processing, where accuracy isn't the highest priority."
+    tech: "Verilog, Cadence Genus, Cadence Innovus, NCSim"
+    image: "/images/projects/layout.png"
+    link: "https://github.com/nogieman/Approximate_Adders.git"
 
   # - title: "Lumi - Realtime Adaptive Voice Assistant"
   #   description: "Built in 24 hours at BrickHack 11, Lumi is a real-time voice assistant with 10 custom tools such as script execution, web searches, AI image generation, and more—all controllable by voice with interruption capabilities."
