@@ -1,7 +1,7 @@
 name: "Lalith Chandra"
 location: "Surat, Gujarat"
 description: "FPGA Developer. I'm currently working on designing generalised ML hardware for reconfigurable AI inference."
-profile_image: "/images/profile.jpg"
+# profile_image: "/images/profile.jpg"
 
 social:
   # discord: "prxshetty"
