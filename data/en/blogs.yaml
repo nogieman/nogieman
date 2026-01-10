@@ -1,5 +1,5 @@
 blogs:
-  - title: "Liberating a Tablet from the Clutches of Tyrrany"
+  - title: "MDM Prison Break with Odin (Part I)"
     date: "2025-11-07"
     summary: "Flashing a custom OS in a samsung tablet."
     tags: ["android", "mdm", "odin","heimdall"]
