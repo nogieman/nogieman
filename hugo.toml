@@ -174,3 +174,19 @@ description = "Scaled up the organisation throught various batches of the Univer
     pageRef = "/contact"
     weight = 5
 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      whiteSpace = "normal"
+
+    [markup.goldmark.extensions]
+      table = true
+      linkify = true
+      strikethrough = true
+      taskList = true
+      typographer = true
+      autoHeadingID = true
+

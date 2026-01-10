@@ -1,30 +1,17 @@
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./layouts/**/*.html", "./content/**/*.{html,md}"],
+  content: [
+    "./layouts/**/*.{html,js}",
+    "../../layouts/**/*.{html,js}",
+    "../../content/**/*.{md,html}",
+  ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Space Grotesk', 'sans-serif'],
-      },
-      colors: {
-        'bg-primary-light': colors.white,
-        'text-primary-light': colors.neutral[800],
-        'text-secondary-light': colors.neutral[600],
-        'border-primary-light': colors.neutral[300],
-        'accent-light': colors.sky[600],
-
-        'bg-primary-dark': '#250284',
-        'bg-secondary-dark': '#2A0A8A',
-        'bg-tertiary-dark': '#2A0A8A',  
-        'text-primary-dark': colors.neutral[100],
-        'text-secondary-dark': colors.neutral[400],
-        'border-primary-dark': colors.neutral[700],
-        'accent-dark': colors.sky[500],
-      },
-    },
+    extend: {},
   },
-  plugins: [],
-} 
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}
+

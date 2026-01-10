@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Odin on Lalith Chandra</title>
+    <link>https://nogieman.github.io/en/tags/odin/</link>
+    <description>Recent content in Odin on Lalith Chandra</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nogieman.github.io/en/tags/odin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Liberating a Tablet from the clutches of Tyrrany 1</title>
+      <link>https://nogieman.github.io/en/blog/flashing_rom/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://nogieman.github.io/en/blog/flashing_rom/</guid>
+      <description>&lt;p&gt;This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.&lt;/p&gt;&#xA;&lt;p&gt;For context, I&amp;rsquo;ve got my hands on a government-provided Samsung tablet (won&amp;rsquo;t be disclosing model or the provider for paranoia-reasons) which has been &amp;ldquo;locked&amp;rdquo; for general usage, and allows only 8 applications that can be used (restricted using a third party MDM software), strictly for academic purposes (including instagram for whatever reasons?).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
