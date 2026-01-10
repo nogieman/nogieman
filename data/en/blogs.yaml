@@ -4,7 +4,7 @@ blogs:
     summary: "Flashing a custom OS in a samsung tablet."
     tags: ["android", "mdm", "odin","heimdall"]
     content: ""
-    link: "/en/blog/flashing_rom/"
+    link: "/nogieman/en/blog/flashing_rom/"
 
   # - title: "Are LLMs Needlessly Huge? Extreme Compression of LLMs using Quantum Inspired Tensor Networks"
   #   date: "2025-08-23"
