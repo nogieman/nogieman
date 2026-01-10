@@ -1,10 +1,10 @@
 blogs:
-  - title: "Coming Soon"
+  - title: "Liberating a Tablet from the Clutches of Tyrrany"
     date: "2025-11-07"
-    summary: ""
-    tags: []
+    summary: "Flashing a custom OS in a samsung tablet."
+    tags: ["android", "mdm", "odin","heimdall"]
     content: ""
-    link: ""
+    link: "/en/blog/flashing_rom/"
 
   # - title: "Are LLMs Needlessly Huge? Extreme Compression of LLMs using Quantum Inspired Tensor Networks"
   #   date: "2025-08-23"

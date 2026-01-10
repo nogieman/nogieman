@@ -1,7 +1,7 @@
 ---
-title: "Liberating a Tablet from the clutches of Tyrrany 1"
+title: "Rebellion via MDM Prison Break with Odin (Part I)"
 date: 2025-12-05
-tags: ["odin","heimdall"]
+tags: ["custom-ROM", "mdm", "odin","heimdall"]
 ---
 
 This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.
@@ -19,7 +19,7 @@ That should work fine... in older tablets (Similar to the Byju's ones). But the 
 Now, the most impulsive (and fun) choice would be to flash a whole new ROM (Custom OS) and take over the bootloader, and make the tablet a pet gadget which I'd use however I want. Now, for
 
 
-# Getting Started
+## Getting Started
 
 
 I went on to search for different tools to flash firmware into the tablet, and found [Odin](https://odindownload.com/), a ROM Flashing tool for SAMSUNG Android devices. But it works for windows (ew), so I found a linux alternative, i.e, [Heimdall](https://glassechidna.com.au/heimdall/) to get the job done.
@@ -46,6 +46,6 @@ We've now flashed new firmware, and CAN use it as a normal Samsung tablet. BUT w
 
 ### NOTE!
 
-This is NOT out final goal. We need to install a custom OS in the tablet, which requires OEM Unlock from the device. In most of the devices, the option appears in `Developer Options` in a week or so. We'll be doing rest of that after it appears.
+This is NOT our final goal. We need to install a custom OS in the tablet, which requires OEM Unlock from the device. In most of the devices, the option appears in `Developer Options` in a week or so. We'll be doing rest of that after it appears.
 
 Until then, Enjoy your brand new Samsung Tablet(Well, new on atleast the software part).
