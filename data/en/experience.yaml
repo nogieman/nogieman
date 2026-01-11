@@ -1,15 +1,26 @@
 experience:
   - company: "Vicharak"
     company_link: "https://www.vicharak.in"
-    role: "FPGA Developer Intern"
+    role: "FPGA Developer"
     period: "June 2025 - Present"
-    country: "India"
+    country: "Gujarat, India"
     logo: "/images/company/vicharak.png"
-    description: "Designing and testing RTL to accelerate Computer Vision models for edge computing on FPGA."
+    description: "Building Gati, a reconfigurable Edge AI Accelerator"
     responsibilities:
       - "Designing and debugging custom RTL blocks for computer vision and neural network acceleration."
-      - "Develop and test Verilog-based accelerator compute blocks for Efinix T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
       - "Benchmark FPGA inference performance against software simulations and optimize for throughput and accuracy."
+      - "Develop and test Verilog-based accelerator compute blocks for Efinix T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
+
+
+  # - company: "Vicharak"
+  #   company_link: "https://www.vicharak.in"
+  #   role: "FPGA Intern"
+  #   period: "June - December 2025"
+  #   country: "Gujarat, India"
+  #   logo: "/images/company/vicharak.png"
+  # description: "Designing and testing RTL to accelerate Computer Vision models for edge computing on FPGA."
+  #   responsibilities:
+  #     - "Develop and test Verilog-based accelerator compute blocks for Efinix T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
 
   - company: "National Institute of Technology, Delhi"
     company_link: "https://nitdelhi.ac.in/"
