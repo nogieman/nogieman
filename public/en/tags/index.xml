@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lalith Chandra</title>
-    <link>https://nogieman.github.io/en/tags/</link>
+    <link>http://localhost:1313/en/tags/</link>
     <description>Recent content in Tags on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nogieman.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom-ROM</title>
-      <link>https://nogieman.github.io/en/tags/custom-rom/</link>
+      <link>http://localhost:1313/en/tags/custom-rom/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/tags/custom-rom/</guid>
+      <guid>http://localhost:1313/en/tags/custom-rom/</guid>
       <description></description>
     </item>
     <item>
       <title>Heimdall</title>
-      <link>https://nogieman.github.io/en/tags/heimdall/</link>
+      <link>http://localhost:1313/en/tags/heimdall/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/tags/heimdall/</guid>
+      <guid>http://localhost:1313/en/tags/heimdall/</guid>
       <description></description>
     </item>
     <item>
       <title>Mdm</title>
-      <link>https://nogieman.github.io/en/tags/mdm/</link>
+      <link>http://localhost:1313/en/tags/mdm/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/tags/mdm/</guid>
+      <guid>http://localhost:1313/en/tags/mdm/</guid>
       <description></description>
     </item>
     <item>
       <title>Odin</title>
-      <link>https://nogieman.github.io/en/tags/odin/</link>
+      <link>http://localhost:1313/en/tags/odin/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/tags/odin/</guid>
+      <guid>http://localhost:1313/en/tags/odin/</guid>
       <description></description>
     </item>
   </channel>

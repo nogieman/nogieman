@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lalith Chandra</title>
-    <link>https://nogieman.github.io/en/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nogieman.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rebellion via MDM Prison Break with Odin (Part I)</title>
-      <link>https://nogieman.github.io/en/blog/flashing_rom/</link>
+      <link>http://localhost:1313/en/blog/flashing_rom/</link>
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/blog/flashing_rom/</guid>
+      <guid>http://localhost:1313/en/blog/flashing_rom/</guid>
       <description>&lt;p&gt;This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.&lt;/p&gt;&#xA;&lt;p&gt;For context, I&amp;rsquo;ve got my hands on a government-provided Samsung tablet (won&amp;rsquo;t be disclosing model or the provider for paranoia-reasons) which has been &amp;ldquo;locked&amp;rdquo; for general usage, and allows only 8 applications that can be used (restricted using a third party MDM software), strictly for academic purposes (including instagram for whatever reasons?).&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>https://nogieman.github.io/en/about/</link>
+      <link>http://localhost:1313/en/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m curious about astrophysics, tech and am highly interested in social justice. This portfolio mostly consists of my techie side, with a hint of other stuff as well in an (as you&amp;rsquo;ve already figured out) extremely informal tone.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve tilted my career towards RTL Design cuz of my ever lasting love for mathematics and physics. I&amp;rsquo;ve tasted a lil bit of everything I could (Linux, android application Reverse engineering, RTL Design, Computer Architecture, pure mathematics), and my list of &amp;lsquo;Stuff I love&amp;rsquo; only grew as I explored more.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/en/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m Lalith, and am curious about tech and social justice. This site mostly consists of my techie side, with a hint of other stuff as well in an (as you&amp;rsquo;ve already figured out) extremely informal tone.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve tilted my career towards RTL Design cuz why not (ps. I like mathematics and physics). I&amp;rsquo;ve tasted a lil bit of everything I could (Linux, android application Reverse engineering, RTL Design, Computer Architecture, pure mathematics), and my list of &amp;lsquo;Stuff I love&amp;rsquo; only grew.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact Me</title>
-      <link>https://nogieman.github.io/en/contact/</link>
+      <link>http://localhost:1313/en/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/contact/</guid>
-      <description>&lt;p&gt;You can contact me via Email or LinkedIn. I usually respond within a few hours. I can&amp;rsquo;t guarantee about insta DMs tho :)&lt;/p&gt;</description>
+      <guid>http://localhost:1313/en/contact/</guid>
+      <description>&lt;p&gt;You can contact me via Email or LinkedIn, can&amp;rsquo;t guarantee about insta DMs tho :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Experience</title>
-      <link>https://nogieman.github.io/en/experience/</link>
+      <link>http://localhost:1313/en/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/experience/</guid>
+      <guid>http://localhost:1313/en/experience/</guid>
       <description>&lt;p&gt;Working as an FPGA Dev, exploring various ways and applications of reconfigurable edge ML acceleration.&lt;br&gt;&#xA;I&amp;rsquo;m also very passionate about Linux and computer architecture in general.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s my &lt;a href=&#34;https://nogieman.github.io/nogieman/images/Lalith_Resume.pdf&#34;&gt;Resume&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>https://nogieman.github.io/en/projects/</link>
+      <link>http://localhost:1313/en/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/projects/</guid>
+      <guid>http://localhost:1313/en/projects/</guid>
       <description>&lt;p&gt;Here are a few of my projects that I think were kinda fun!&lt;/p&gt;</description>
     </item>
   </channel>

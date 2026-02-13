@@ -19,23 +19,23 @@ defaultContentLanguageInSubdir = true
     contentDir = "content/en"
     [languages.en.menu]
       [[languages.en.menu.main]]
-        name = "About"
+        name = "Who dis"
         pageRef = "/about"
         weight = 1
       [[languages.en.menu.main]]
-        name = "Experience"
+        name = "Stuff done"
         pageRef = "/experience"
         weight = 2
-      [[languages.en.menu.main]]
-        name = "Projects"
-        pageRef = "/projects"
-        weight = 3
+      # [[languages.en.menu.main]]
+      #   name = "Projects"
+      #   pageRef = "/projects"
+      #   weight = 3
       [[languages.en.menu.main]]
         name = "Blogs"
         pageRef = "/blog"
         weight = 4
       [[languages.en.menu.main]]
-        name = "Contact"
+        name = "Say hi"
         pageRef = "/contact"
         weight = 5
   # [languages.es]
@@ -117,10 +117,10 @@ instagram = "https://instagram.com/nogieman.io"
 # kaggle = "https://www.kaggle.com/prxshetty"
 # kaggle_username = "prxshetty"
 
-[[params.honors]]
-institution = "Rajiv Gandhi University of Knowledge Technologies, Basar"
-title = "Elected secretary of the University's Entrepreneurship Cell"
-date = "January 2024"
+# [[params.honors]]
+# institution = "Rajiv Gandhi University of Knowledge Technologies, Basar"
+# title = "Elected secretary of the University's Entrepreneurship Cell"
+# date = "January 2024"
 
 # [[params.honors]]
 # institution = "Podar International School, Nashik"

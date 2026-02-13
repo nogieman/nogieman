@@ -7,9 +7,7 @@ experience:
     logo: "/images/company/vicharak.png"
     description: "Building Gati, a reconfigurable Edge AI Accelerator"
     responsibilities:
-      - "Designing and debugging custom RTL blocks for computer vision and neural network acceleration."
-      - "Benchmark FPGA inference performance against software simulations and optimize for throughput and accuracy."
-      - "Develop and test Verilog-based accelerator compute blocks for Efinix T120 FPGA on the [Vaaman board](https://vicharak.in/vaaman)."
+      - "Design & debug custom RTL blocks for CNN accelration."
 
 
   # - company: "Vicharak"
@@ -31,8 +29,6 @@ experience:
     description: "Research Approximate computing circuits compatible for MAC units."
     responsibilities:
       - "Built an approximate image multiplier for intensive ML applications, under the mentorhsip of [Dr. Preeti Verma](https://scholar.google.com/citations?user=H60Wh_8AAAAJ&hl=en)."
-      - "Architected a 32 bit approximate multiplier, verified it's operation with python scripting. Performed ASIC Design flow (RTL to GDS-II) with 90nm and 180nm technologies."
-      - "Built and verified multiple Approximate Adders, within a MAC Unit."
 
   - company: "Entrepreneurship Cell, RGUKT Basar"
     company_link: "https://www.linkedin.com/company/e-cell-rgukt-basara/"
@@ -44,5 +40,3 @@ experience:
     responsibilities:
       - "Started as a PR manager, eventually to be elected as the Secretary."
       - "Organised various events on campus bringing entreprenurial spirit to an ecosystem with mostly students from rural Telangana."
-      - "First runner-up in IITB's [NEC](https://www.ecell.in/nec/) 2024, officially sponsored by [TGIC](https://it.telangana.gov.in/initiatives/tgic/) for the [startup Mahakumbh](https://startupmahakumbh.org/)"
-      - "2x Moderator at [Development Dialogue](https://developmentdialogue.org/), organised by [Kakatiya Sandbox's](https://kakatiyasandbox.org/)"
