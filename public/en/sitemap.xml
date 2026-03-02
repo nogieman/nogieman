@@ -2,38 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/blog/</loc>
+    <loc>https://nogieman.github.io/en/blog/</loc>
+    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/</loc>
+    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/blog/archives/</loc>
+    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/custom-rom/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/custom-rom/</loc>
+    <loc>https://nogieman.github.io/en/tags/heimdall/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/heimdall/</loc>
+    <loc>https://nogieman.github.io/en/tags/mdm/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://nogieman.github.io/en/tags/odin/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/mdm/</loc>
+    <loc>https://nogieman.github.io/en/blog/flashing_rom/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/odin/</loc>
+    <loc>https://nogieman.github.io/en/tags/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/blog/flashing_rom/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://nogieman.github.io/en/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://nogieman.github.io/en/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/about/</loc>
+    <loc>https://nogieman.github.io/en/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://nogieman.github.io/en/experience/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/contact/</loc>
-  </url><url>
-    <loc>http://localhost:1313/en/experience/</loc>
-  </url><url>
-    <loc>http://localhost:1313/en/projects/</loc>
+    <loc>https://nogieman.github.io/en/projects/</loc>
   </url>
 </urlset>
