@@ -1,32 +1,27 @@
-/* Dark mode terminal theme - Violet variant */
+/* Dark mode terminal theme - Fallout Classic Green */
 .dark body {
-  background-color: #0f0620 !important;
-  color: #c77dff !important;
+  background-color: #0a0f0a !important;
+  color: #33ff33 !important;
   font-family: 'Courier New', monospace !important;
 }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: #c77dff !important;
-  text-shadow: 0 0 6px #9d4edd !important;
+  color: #33ff33 !important;
+  text-shadow: 0 0 6px #1aff1a !important;
 }
 
 .dark a {
-  color: #c77dff !important;
+  color: #33ff33 !important;
 }
 
 .dark a:hover {
-  color: #e0aaff !important;
-  text-shadow: 0 0 8px #9d4edd;
+  color: #66ff66 !important;
+  text-shadow: 0 0 8px #1aff1a;
 }
 
 .dark pre, .dark code {
-  background: #0f0620 !important;
-  border: 2px solid #9d4edd !important;
-  color: #c77dff !important;
+  background: #0a0f0a !important;
+  border: 2px solid #1aff1a !important;
+  color: #33ff33 !important;
 }
-
-/* .dark .container, .dark main, .dark article { */
-/*   border: 1px solid #9d4edd; */
-/*   box-shadow: 0 0 15px rgba(157, 78, 221, 0.2) inset; */
-/* } */
 

@@ -1,26 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on Lalith Chandra</title>
-    <link>https://nogieman.github.io/en/blog/</link>
-    <description>Recent content in Blogs on Lalith Chandra</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nogieman.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Some cool stuff</title>
-      <link>https://nogieman.github.io/en/blog/archives/</link>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/blog/archives/</guid>
-      <description>&lt;p&gt;Links&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HIP docs: &lt;a href=&#34;https://rocm.docs.amd.com/projects/HIP/en/latest/&#34;&gt;https://rocm.docs.amd.com/projects/HIP/en/latest/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Khronos for HPC: &lt;a href=&#34;https://www.khronos.org/sycl/&#34;&gt;https://www.khronos.org/sycl/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Hugh Perkins&amp;rsquo; GPU: &lt;a href=&#34;https://github.com/hughperkins/VeriGPU&#34;&gt;https://github.com/hughperkins/VeriGPU&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;NPU for LLMs: &lt;a href=&#34;https://arxiv.org/pdf/2602.12962&#34;&gt;https://arxiv.org/pdf/2602.12962&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Activation engine: &lt;a href=&#34;https://arxiv.org/pdf/2512.23062&#34;&gt;https://arxiv.org/pdf/2512.23062&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Accelerator for 1.58-bit LLM: &lt;a href=&#34;https://arxiv.org/pdf/2510.15926&#34;&gt;https://arxiv.org/pdf/2510.15926&lt;/a&gt; &amp;ndash; 25 Tokens/s in 5W&lt;/li&gt;&#xA;&lt;li&gt;VTR: &lt;a href=&#34;https://github.com/verilog-to-routing/vtr-verilog-to-routing&#34;&gt;https://github.com/verilog-to-routing/vtr-verilog-to-routing&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;ATMel: &lt;a href=&#34;https://start.atmel.com/&#34;&gt;https://start.atmel.com/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;HALO&amp;rsquo;s FRAME (opensource smartglasses): &lt;a href=&#34;https://docs.brilliant.xyz/frame/frame/&#34;&gt;https://docs.brilliant.xyz/frame/frame/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;FPGAs and DNNs: &lt;a href=&#34;https://youtu.be/WWCWsub3YkE?si=vo1GEcfPHKgIRKZw&#34;&gt;https://youtu.be/WWCWsub3YkE?si=vo1GEcfPHKgIRKZw&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;BORPH (FPGA-supportive OS): &lt;a href=&#34;https://casper.berkeley.edu/wiki/BORPH&#34;&gt;https://casper.berkeley.edu/wiki/BORPH&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;CASPERFPGA py lib: &lt;a href=&#34;https://github.com/casper-astro/casperfpga&#34;&gt;https://github.com/casper-astro/casperfpga&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Rebellion via MDM Prison Break with Odin (Part I)</title>
-      <link>https://nogieman.github.io/en/blog/flashing_rom/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://nogieman.github.io/en/blog/flashing_rom/</guid>
-      <description>&lt;p&gt;This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.&lt;/p&gt;&#xA;&lt;p&gt;For context, I&amp;rsquo;ve got my hands on a government-provided Samsung tablet (won&amp;rsquo;t be disclosing model or the provider for paranoia-reasons) which has been &amp;ldquo;locked&amp;rdquo; for general usage, and allows only 8 applications that can be used (restricted using a third party MDM software), strictly for academic purposes (including instagram for whatever reasons?).&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Lalith Chandra</title><link>https://nogieman.github.io/en/blog/</link><description>Recent content in Blogs on Lalith Chandra</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 02 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://nogieman.github.io/en/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Some cool stuff</title><link>https://nogieman.github.io/en/blog/archives/</link><pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate><guid>https://nogieman.github.io/en/blog/archives/</guid><description>&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HIP docs: &lt;a href="https://rocm.docs.amd.com/projects/HIP/en/latest/"&gt;https://rocm.docs.amd.com/projects/HIP/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Khronos for HPC: &lt;a href="https://www.khronos.org/sycl/"&gt;https://www.khronos.org/sycl/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hugh Perkins&amp;rsquo; GPU: &lt;a href="https://github.com/hughperkins/VeriGPU"&gt;https://github.com/hughperkins/VeriGPU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NPU for LLMs: &lt;a href="https://arxiv.org/pdf/2602.12962"&gt;https://arxiv.org/pdf/2602.12962&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Activation engine: &lt;a href="https://arxiv.org/pdf/2512.23062"&gt;https://arxiv.org/pdf/2512.23062&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Accelerator for 1.58-bit LLM: &lt;a href="https://arxiv.org/pdf/2510.15926"&gt;https://arxiv.org/pdf/2510.15926&lt;/a&gt; &amp;ndash; 25 Tokens/s in 5W&lt;/li&gt;
+&lt;li&gt;VTR: &lt;a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing"&gt;https://github.com/verilog-to-routing/vtr-verilog-to-routing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ATMel: &lt;a href="https://start.atmel.com/"&gt;https://start.atmel.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HALO&amp;rsquo;s FRAME (opensource smartglasses): &lt;a href="https://docs.brilliant.xyz/frame/frame/"&gt;https://docs.brilliant.xyz/frame/frame/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FPGAs and DNNs: &lt;a href="https://youtu.be/WWCWsub3YkE?si=vo1GEcfPHKgIRKZw"&gt;https://youtu.be/WWCWsub3YkE?si=vo1GEcfPHKgIRKZw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BORPH (FPGA-supportive OS): &lt;a href="https://casper.berkeley.edu/wiki/BORPH"&gt;https://casper.berkeley.edu/wiki/BORPH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CASPERFPGA py lib: &lt;a href="https://github.com/casper-astro/casperfpga"&gt;https://github.com/casper-astro/casperfpga&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Rebellion via MDM Prison Break with Odin (Part I)</title><link>https://nogieman.github.io/en/blog/flashing_rom/</link><pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate><guid>https://nogieman.github.io/en/blog/flashing_rom/</guid><description>&lt;p&gt;This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.&lt;/p&gt;
+&lt;p&gt;For context, I&amp;rsquo;ve got my hands on a government-provided Samsung tablet (won&amp;rsquo;t be disclosing model or the provider for paranoia-reasons) which has been &amp;ldquo;locked&amp;rdquo; for general usage, and allows only 8 applications that can be used (restricted using a third party MDM software), strictly for academic purposes (including instagram for whatever reasons?).&lt;/p&gt;</description></item></channel></rss>

@@ -1,30 +1,27 @@
-body {
-  background-color: #0a0e27 !important;
-  color: #00d9ff !important;
+/* Dark mode terminal theme - Fallout Classic Green */
+.dark body {
+  background-color: #0a0f0a !important;
+  color: #33ff33 !important;
   font-family: 'Courier New', monospace !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #00d9ff !important;
-  text-shadow: 0 0 10px #0066cc !important;
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #33ff33 !important;
+  text-shadow: 0 0 6px #1aff1a !important;
 }
 
-a {
-  color: #00d9ff !important;
+.dark a {
+  color: #33ff33 !important;
 }
 
-a:hover {
-  color: #1a9fff !important;
+.dark a:hover {
+  color: #66ff66 !important;
+  text-shadow: 0 0 8px #1aff1a;
 }
 
-pre, code {
-  background-color: #0a0e27 !important;
-  border: 2px solid #0066cc !important;
-  color: #00d9ff !important;
+.dark pre, .dark code {
+  background: #0a0f0a !important;
+  border: 2px solid #1aff1a !important;
+  color: #33ff33 !important;
 }
 
-.terminal {
-  border: 2px solid #0066cc;
-  padding: 1rem;
-  box-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
-}
