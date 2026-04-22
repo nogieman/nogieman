@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom.css">
         <title>Rebellion via MDM Prison Break with Odin (Part I) - Lalith Chandra</title>
         
         
@@ -488,9 +489,9 @@
 <p>I went on to search for different tools to flash firmware into the tablet, and found <a href="https://odindownload.com/">Odin</a>, a ROM Flashing tool for SAMSUNG Android devices. But it works for windows (ew), so I found a linux alternative, i.e, <a href="https://glassechidna.com.au/heimdall/">Heimdall</a> to get the job done.</p>
 <p>I went to <a href="https://samfw.com/">SamFw</a> obviously, for financial reasons, and got the exact firmware for my device. Remember to keep an eye and NOT to download the whole factory version (that ends with <code>_fac</code>). You need the CHILD files instead. Specifically,</p>
 <ol>
-<li><code>AP_*_user_low_ship_MULTI_CERT_meta*.zip</code></li>
-<li><code>BL_*_user_low_ship*.zip</code></li>
-<li><code>CSC_ODM_*_user_low_ship_*.zip</code></li>
+<li>AP_<em>_user_low_ship_MULTI_CERT_meta</em>.zip</li>
+<li>BL_<em>_user_low_ship</em>.zip</li>
+<li>CSC_ODM_<em><em>user_low_ship</em></em>.zip</li>
 </ol>
 <p>Save these and extract with <code>tar -xvf &lt;filename&gt;</code>. There&rsquo;ll be multiple images in each tar file, we&rsquo;ll be mapping them with PIT.</p>
 <p>After trying some painful stuff out, I found something depressing about the Tablet. It WAS NOT using Samsung/Odin&rsquo;s partitions, it was using a MediaTek PIT layout. What this means, is that heimdall CANNOT flash these onto my device(heimdall can work with older exynos based firmware). The depressing part of the problem is that I have to go to windows, and use Odin to do the job.</p>

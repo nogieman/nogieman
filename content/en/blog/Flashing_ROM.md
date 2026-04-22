@@ -25,9 +25,10 @@ Now, the most impulsive (and fun) choice would be to flash a whole new ROM (Cust
 I went on to search for different tools to flash firmware into the tablet, and found [Odin](https://odindownload.com/), a ROM Flashing tool for SAMSUNG Android devices. But it works for windows (ew), so I found a linux alternative, i.e, [Heimdall](https://glassechidna.com.au/heimdall/) to get the job done.
 
 I went to [SamFw](https://samfw.com/) obviously, for financial reasons, and got the exact firmware for my device. Remember to keep an eye and NOT to download the whole factory version (that ends with `_fac`). You need the CHILD files instead. Specifically,
-1. `AP_*_user_low_ship_MULTI_CERT_meta*.zip`
-2. `BL_*_user_low_ship*.zip`
-3. `CSC_ODM_*_user_low_ship_*.zip`
+
+1. AP_*_user_low_ship_MULTI_CERT_meta*.zip
+2. BL_*_user_low_ship*.zip
+3. CSC_ODM_*_user_low_ship_*.zip
 
 Save these and extract with `tar -xvf <filename>`. There'll be multiple images in each tar file, we'll be mapping them with PIT. 
 

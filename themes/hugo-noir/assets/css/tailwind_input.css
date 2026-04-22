@@ -1,4 +1,31 @@
+@layer base {
+  :root {
+    --color-bg: #0a0e27;
+    --color-text: #00d9ff;
+    --color-accent: #0066cc;
+  }
+
+  body {
+    @apply bg-[#0a0e27] text-[#00d9ff];
+    font-family: 'Courier New', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[#00d9ff];
+    text-shadow: 0 0 10px #0066cc;
+  }
+
+  a {
+    @apply text-[#00d9ff] hover:text-[#1a9fff];
+  }
+
+  pre, code {
+    @apply bg-[#0a0e27] border-2 border-[#0066cc] p-2;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind typography;
+
