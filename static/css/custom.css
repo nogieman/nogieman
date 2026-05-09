@@ -7,7 +7,7 @@
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
   color: #33ff33 !important;
-  text-shadow: 0 0 6px #1aff1a !important;
+  /* text-shadow: 0 0 6px #1aff1a !important; */
 }
 
 .dark a {
