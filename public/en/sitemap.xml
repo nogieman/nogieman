@@ -2,11 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nogieman.github.io/en/tags/accelerator/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/ai/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/blackhole/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nogieman.github.io/en/blog/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nogieman.github.io/en/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/blog/tenstorrent_arch/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/tenstorrent/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nogieman.github.io/en/tags/wormhole/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nogieman.github.io/en/blog/archives/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
@@ -26,8 +47,9 @@
     <loc>https://nogieman.github.io/en/blog/flashing_rom/</loc>
     <lastmod>2025-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nogieman.github.io/en/tags/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://nogieman.github.io/en/blog/recepies/</loc>
+  </url><url>
+    <loc>https://nogieman.github.io/en/blog/timeloop/</loc>
   </url><url>
     <loc>https://nogieman.github.io/en/about/</loc>
   </url><url>

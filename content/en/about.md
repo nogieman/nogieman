@@ -11,4 +11,4 @@ Sophomore me and a few of my seniors formed the University's [Entrepreneurship-C
 
 My college gave me an exposure I never imagined to get, insights about the alienation of country's rural roots from the problem solving pursuit itself and how politics work on the grassroot level.
 
-Right now, I'm working on ML acceleration at [Vicharak](https://vicharak.in/).
+Right now, I'm working on designing edge hardware for ML acceleration at [Vicharak](https://vicharak.in/).

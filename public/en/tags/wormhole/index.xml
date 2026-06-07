@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wormhole on Lalith Chandra</title>
+    <link>https://nogieman.github.io/en/tags/wormhole/</link>
+    <description>Recent content in Wormhole on Lalith Chandra</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nogieman.github.io/en/tags/wormhole/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surface diving into Tenstorrent&#39;s Wormhole architecture</title>
+      <link>https://nogieman.github.io/en/blog/tenstorrent_arch/</link>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://nogieman.github.io/en/blog/tenstorrent_arch/</guid>
+      <description>&lt;h2 id=&#34;0-overview-and-stats&#34;&gt;0: Overview and stats&lt;/h2&gt;&#xA;&lt;p&gt;This blog will be focusing mainly on it&amp;rsquo;s microarchitecture, along with their NoC. I will touch their peripherals and compiler a lil as well, but won&amp;rsquo;t be digging too much into their ISA, because honestly, it&amp;rsquo;s a documentation hell in their tt-metal and ISA documentation repo (not complaining tho, thankyou TT for making it open, very cool).&lt;/p&gt;&#xA;&lt;p&gt;Before understanding their microarchitecture, it&amp;rsquo;s good to know the performance it delivers (LOL jk, I just put it there to sound like a nerd).&lt;br&gt;&#xA;Below is a table comparing their various accelerator cards with their performance and hardware specifications. We&amp;rsquo;ll discuss everything soon dw.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

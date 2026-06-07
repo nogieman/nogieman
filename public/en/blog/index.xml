@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Lalith Chandra</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nogieman.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surface diving into Tenstorrent&#39;s Wormhole architecture</title>
+      <link>https://nogieman.github.io/en/blog/tenstorrent_arch/</link>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://nogieman.github.io/en/blog/tenstorrent_arch/</guid>
+      <description>&lt;h2 id=&#34;0-overview-and-stats&#34;&gt;0: Overview and stats&lt;/h2&gt;&#xA;&lt;p&gt;This blog will be focusing mainly on it&amp;rsquo;s microarchitecture, along with their NoC. I will touch their peripherals and compiler a lil as well, but won&amp;rsquo;t be digging too much into their ISA, because honestly, it&amp;rsquo;s a documentation hell in their tt-metal and ISA documentation repo (not complaining tho, thankyou TT for making it open, very cool).&lt;/p&gt;&#xA;&lt;p&gt;Before understanding their microarchitecture, it&amp;rsquo;s good to know the performance it delivers (LOL jk, I just put it there to sound like a nerd).&lt;br&gt;&#xA;Below is a table comparing their various accelerator cards with their performance and hardware specifications. We&amp;rsquo;ll discuss everything soon dw.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Some cool stuff</title>
       <link>https://nogieman.github.io/en/blog/archives/</link>
@@ -21,6 +28,20 @@
       <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://nogieman.github.io/en/blog/flashing_rom/</guid>
       <description>&lt;p&gt;This is the first part of my blog where I attempt to flash a new OS into a tablet, that has been carrying a firmware, locked down with heavy restrictions.&lt;/p&gt;&#xA;&lt;p&gt;For context, I&amp;rsquo;ve got my hands on a government-provided Samsung tablet (won&amp;rsquo;t be disclosing model or the provider for paranoia-reasons) which has been &amp;ldquo;locked&amp;rdquo; for general usage, and allows only 8 applications that can be used (restricted using a third party MDM software), strictly for academic purposes (including instagram for whatever reasons?).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://nogieman.github.io/en/blog/recepies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nogieman.github.io/en/blog/recepies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://nogieman.github.io/en/blog/timeloop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nogieman.github.io/en/blog/timeloop/</guid>
+      <description>&lt;h1 id=&#34;timeloop-installation-troubleshooting-guide&#34;&gt;Timeloop Installation Troubleshooting Guide&lt;/h1&gt;&#xA;&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;OS: Debian Linux&lt;/li&gt;&#xA;&lt;li&gt;Compiler: GCC 15&lt;/li&gt;&#xA;&lt;li&gt;Build system: Make + SCons&lt;/li&gt;&#xA;&lt;li&gt;Repo: &lt;code&gt;accelergy-timeloop-infrastructure&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;problem-1-implicit-function-declaration-error-in-polylib&#34;&gt;Problem 1: Implicit Function Declaration Error in polylib&lt;/h2&gt;&#xA;&lt;h3 id=&#34;error&#34;&gt;Error&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./applications/testCompressParms.c:58:9: error: implicit declaration of function&#xA;&amp;#39;test_Constraints_Remove_parm_eqs&amp;#39;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cause&#34;&gt;Cause&lt;/h3&gt;&#xA;&lt;p&gt;Newer GCC versions treat implicit function declarations as errors.&lt;br&gt;&#xA;The polylib test file calls undeclared functions.&lt;/p&gt;&#xA;&lt;h3 id=&#34;fix&#34;&gt;Fix&lt;/h3&gt;&#xA;&lt;p&gt;Pass warning suppression flags to Make:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm -rf /tmp/build-timeloop&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make install_timeloop CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-w -Wno-implicit-function-declaration&amp;#34;&lt;/span&gt; CXXFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-w&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;problem-2-undefined-reference-to-glp_-functions&#34;&gt;Problem 2: Undefined Reference to &lt;code&gt;glp_*&lt;/code&gt; Functions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;error-1&#34;&gt;Error&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/bin/x86_64-linux-gnu-ld.bfd: /usr/local/lib/libbarvinok.a(polysign_glpk.o):&#xA;in function `solve_lp&amp;#39;: undefined reference to `glp_create_prob&amp;#39;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cause-1&#34;&gt;Cause&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;libbarvinok&lt;/code&gt; was compiled with GLPK support but &lt;code&gt;glpk&lt;/code&gt; was not linked during the SCons build.&lt;br&gt;&#xA;SCons ignores the &lt;code&gt;LDFLAGS&lt;/code&gt; environment variable.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

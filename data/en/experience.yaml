@@ -1,13 +1,13 @@
 experience:
   - company: "Vicharak"
     company_link: "https://www.vicharak.in"
-    role: "FPGA Developer"
+    role: "ASIC Design Engineer"
     period: "June 2025 - Present"
     country: "Gujarat, India"
     logo: "/images/company/vicharak.png"
-    description: "Building Gati, a reconfigurable Edge AI Accelerator"
+    description: "Building Gati, an edge AI accelerator"
     responsibilities:
-      - "Design & debug custom RTL blocks for CNN accelration."
+      - "SoC Design (cache hierarchy, on-chip networks)"
 
 
   # - company: "Vicharak"
