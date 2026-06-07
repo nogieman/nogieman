@@ -35,4 +35,4 @@ Components in Tensix Cores:
 3. 1x Tensix CoProcessor
 4. 2x NoC connections + 1 NoC Overlay
 
-# [To be continued]
+# [To be continued because lazy]
