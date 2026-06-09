@@ -559,6 +559,85 @@ Wormhole has around 64 Tensix cores, and blackhole has 128 as specified in the t
 <li>1x Tensix CoProcessor</li>
 <li>2x NoC connections + 1 NoC Overlay</li>
 </ol>
+<p><img src="https://nogieman.github.io/nogieman/images/tensix_dataflow.png" alt=""></p>
+<h4 id="baby-riscv-cores">Baby RISCV Cores</h4>
+<ul>
+<li>They are small 32-bit in-order single-issue cores, that execute RV32IM ISA + custom tensix extension.</li>
+<li>The 5x RISCV cores are used as controllers, &amp; are expected to execute one RV32IM instruction per cycle, with 1GHz clk.<br>
+The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unpacking -&gt; Compute -&gt; Packing -&gt; Data egress, are driven by the 5 RISCV cores.</li>
+<li>These are responsible as control circuits alone and do not perform any compute operations. They are optimized for area and power.</li>
+<li>The 5 cores are given 2 main designated tasks:
+<ol>
+<li>NCRISC and BRISC Handle NoC communications.
+<ul>
+<li>These issue asynchronous NoC read-write commands.</li>
+</ul>
+</li>
+<li>TRISC0, TRISC1 and TRISC2  manage Trnsix execution pipeline.
+<ul>
+<li>TRISC0 is the unpacker, instructing the DMA engine to load data from SRAM into 4KiB srcA and srcB registers.</li>
+<li>TRISC1 is the math dispatcher that issues instructions to ALUs.</li>
+<li>TRISC2 functions as the packer, instructing the hew to format accumulator results and push into SRAM.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Core Designation</th>
+          <th>Primary Hardware Function</th>
+          <th>Pipeline Stage</th>
+          <th>Local Instruction Memory</th>
+          <th>Local Data Memory</th>
+          <th>Coprocessor Privileges</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RISC-V NC (NCRISC)</td>
+          <td>NoC 0 Control, DRAM Ingress</td>
+          <td>1. Data Movement</td>
+          <td>½ KiB Cache + 16 KiB RAM</td>
+          <td>4 KiB RAM</td>
+          <td>Debug Bus Only</td>
+      </tr>
+      <tr>
+          <td>RISC-V T0 (TRISC0)</td>
+          <td>Unpacker Hardware Dispatch</td>
+          <td>2. Data Unpack</td>
+          <td>2 KiB Cache</td>
+          <td>2 KiB RAM</td>
+          <td>High / Full Access</td>
+      </tr>
+      <tr>
+          <td>RISC-V T1 (TRISC1)</td>
+          <td>Matrix (FPU) &amp; Vector (SFPU) Dispatch</td>
+          <td>3. Compute</td>
+          <td>½ KiB Cache</td>
+          <td>2 KiB RAM</td>
+          <td>High / Full Access</td>
+      </tr>
+      <tr>
+          <td>RISC-V T2 (TRISC2)</td>
+          <td>Packer Hardware Dispatch</td>
+          <td>4. Data Pack</td>
+          <td>2 KiB Cache</td>
+          <td>2 KiB RAM</td>
+          <td>High / Full Access</td>
+      </tr>
+      <tr>
+          <td>RISC-V B (BRISC)</td>
+          <td>NoC 1 Control, DRAM Egress, Tile Orchestration</td>
+          <td>5. Data Movement</td>
+          <td>2 KiB Cache</td>
+          <td>4 KiB RAM</td>
+          <td>Moderate</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://nogieman.github.io/nogieman/images/pipeline.png" alt="Pipeline"></p>
 <h1 id="to-be-continued-because-lazy">[To be continued because lazy]</h1>
 
     </div>

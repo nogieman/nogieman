@@ -35,4 +35,33 @@ Components in Tensix Cores:
 3. 1x Tensix CoProcessor
 4. 2x NoC connections + 1 NoC Overlay
 
+![](https://nogieman.github.io/nogieman/images/tensix_dataflow.png)
+
+#### Baby RISCV Cores 
+- They are small 32-bit in-order single-issue cores, that execute RV32IM ISA + custom tensix extension.
+- The 5x RISCV cores are used as controllers, & are expected to execute one RV32IM instruction per cycle, with 1GHz clk. 
+   The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -> Unpacking -> Compute -> Packing -> Data egress, are driven by the 5 RISCV cores.
+- These are responsible as control circuits alone and do not perform any compute operations. They are optimized for area and power.
+-  The 5 cores are given 2 main designated tasks: 
+    1. NCRISC and BRISC Handle NoC communications.
+        - These issue asynchronous NoC read-write commands.
+    2. TRISC0, TRISC1 and TRISC2  manage Trnsix execution pipeline.
+        - TRISC0 is the unpacker, instructing the DMA engine to load data from SRAM into 4KiB srcA and srcB registers.
+        - TRISC1 is the math dispatcher that issues instructions to ALUs.
+        - TRISC2 functions as the packer, instructing the hew to format accumulator results and push into SRAM.
+
+
+| Core Designation  | Primary Hardware Function                     | Pipeline Stage  | Local Instruction Memory| Local Data Memory | Coprocessor Privileges |
+|-------------------|-----------------------------------------------|-----------------|-------------------------|-------------------|------------------------|
+| RISC-V NC (NCRISC)| NoC 0 Control, DRAM Ingress                   | 1. Data Movement| ½ KiB Cache + 16 KiB RAM| 4 KiB RAM         | Debug Bus Only         |
+| RISC-V T0 (TRISC0)| Unpacker Hardware Dispatch                    | 2. Data Unpack  | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V T1 (TRISC1)| Matrix (FPU) & Vector (SFPU) Dispatch         | 3. Compute      | ½ KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V T2 (TRISC2)| Packer Hardware Dispatch                      | 4. Data Pack    | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration| 5. Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
+
+
+
+![Pipeline](https://nogieman.github.io/nogieman/images/pipeline.png)
+
+
 # [To be continued because lazy]
