@@ -53,15 +53,34 @@ Components in Tensix Cores:
 
 | Core Designation  | Primary Hardware Function                     | Pipeline Stage  | Local Instruction Memory| Local Data Memory | Coprocessor Privileges |
 |-------------------|-----------------------------------------------|-----------------|-------------------------|-------------------|------------------------|
-| RISC-V NC (NCRISC)| NoC 0 Control, DRAM Ingress                   | 1. Data Movement| ½ KiB Cache + 16 KiB RAM| 4 KiB RAM         | Debug Bus Only         |
-| RISC-V T0 (TRISC0)| Unpacker Hardware Dispatch                    | 2. Data Unpack  | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
-| RISC-V T1 (TRISC1)| Matrix (FPU) & Vector (SFPU) Dispatch         | 3. Compute      | ½ KiB Cache             | 2 KiB RAM         | High / Full Access     |
-| RISC-V T2 (TRISC2)| Packer Hardware Dispatch                      | 4. Data Pack    | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
-| RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration| 5. Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
+| RISC-V NC (NCRISC)| NoC 0 Control, DRAM Ingress                   |  Data Movement| ½ KiB Cache + 16 KiB RAM| 4 KiB RAM         | Debug Bus Only         |
+| RISC-V T0 (TRISC0)| Unpacker Hardware Dispatch                    |  Data Unpack  | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V T1 (TRISC1)| Matrix (FPU) & Vector (SFPU) Dispatch         |  Compute      | ½ KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V T2 (TRISC2)| Packer Hardware Dispatch                      |  Data Pack    | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration|  Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
 
 
 
 ![Pipeline](https://nogieman.github.io/nogieman/images/pipeline.png)
 
+#### SRAM L1/Scratchpad
+TT calls this as L1 but it's just a Scratchpad, as mentioned in their tt-metal docs.
+The 1.5 MB SRAM is available per Tensix Core that holds transient data. Hundreads of tensix cores in the chip offer enough memory capacity. The architecture avoids complex cache hierarchies, and instead uses a flat software managed SRAM pool. 
+The architecture has hybrid approach where data can be stored in both SRAM and DRAM, to avoid storing excessive data on-chip as well as avoiding multiple DRAM accesses by storing enough intermediate data in SRAM.
+- It's organised as 16 banks (91.5 KiB each), each capable of 128 bit read or write per cycle.
+- Any port can access any bank, but one at a time. If there's a conflict, remaining ports are forced to wait.
+- Some ports (6 ports) have multiple clients attached to them via mux, only one client can access it at a time and remaining will be forced to wait.
+
+
+![L1](https://nogieman.github.io/nogieman/images/L1.png)
+
+##### Functionalities supported by the ports:
+- 128 bit read-write.
+- Narrow reads, implemented by simply reading 128 bits and discarding unwamted bits, hence uses same BW as normal read.
+- Narrow writes, implemented by read-modify-write operation, blocking port as well as the bank for 5 cycles, hence uses 5 times of the write bandwidth.
+- Atomics (operations executed as one uninterrupted task) are implemented as read-modify-write opetations, and block the port and the corresponding bank for 5 cycles. This function is exposed to NoC and ThCon.
+- Near memory accumulate (4x FP32 or INT32, sign-magniture with saturation, or 8x FP16, BF16) is implemented as atomic read-modify-write operation, or non-atomic operation. If non-atomic, then it blocks the prot and bank for only 2 cycles, but users have to ensure overlapping operations are not targetting overlapping addresses in the banks. This function is exposed to packers.
+
+The physical placement of DRAM controllers are exploited by default, using "interleaved" mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in "sharded" mode where tensors are distributed across multiple Tensix cores. We'll see them in detail.
 
 # [To be continued because lazy]

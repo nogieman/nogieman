@@ -598,7 +598,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
       <tr>
           <td>RISC-V NC (NCRISC)</td>
           <td>NoC 0 Control, DRAM Ingress</td>
-          <td>1. Data Movement</td>
+          <td>Data Movement</td>
           <td>½ KiB Cache + 16 KiB RAM</td>
           <td>4 KiB RAM</td>
           <td>Debug Bus Only</td>
@@ -606,7 +606,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
       <tr>
           <td>RISC-V T0 (TRISC0)</td>
           <td>Unpacker Hardware Dispatch</td>
-          <td>2. Data Unpack</td>
+          <td>Data Unpack</td>
           <td>2 KiB Cache</td>
           <td>2 KiB RAM</td>
           <td>High / Full Access</td>
@@ -614,7 +614,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
       <tr>
           <td>RISC-V T1 (TRISC1)</td>
           <td>Matrix (FPU) &amp; Vector (SFPU) Dispatch</td>
-          <td>3. Compute</td>
+          <td>Compute</td>
           <td>½ KiB Cache</td>
           <td>2 KiB RAM</td>
           <td>High / Full Access</td>
@@ -622,7 +622,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
       <tr>
           <td>RISC-V T2 (TRISC2)</td>
           <td>Packer Hardware Dispatch</td>
-          <td>4. Data Pack</td>
+          <td>Data Pack</td>
           <td>2 KiB Cache</td>
           <td>2 KiB RAM</td>
           <td>High / Full Access</td>
@@ -630,7 +630,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
       <tr>
           <td>RISC-V B (BRISC)</td>
           <td>NoC 1 Control, DRAM Egress, Tile Orchestration</td>
-          <td>5. Data Movement</td>
+          <td>Data Movement</td>
           <td>2 KiB Cache</td>
           <td>4 KiB RAM</td>
           <td>Moderate</td>
@@ -638,6 +638,25 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
   </tbody>
 </table>
 <p><img src="https://nogieman.github.io/nogieman/images/pipeline.png" alt="Pipeline"></p>
+<h4 id="sram-l1scratchpad">SRAM L1/Scratchpad</h4>
+<p>TT calls this as L1 but it&rsquo;s just a Scratchpad, as mentioned in their tt-metal docs.<br>
+The 1.5 MB SRAM is available per Tensix Core that holds transient data. Hundreads of tensix cores in the chip offer enough memory capacity. The architecture avoids complex cache hierarchies, and instead uses a flat software managed SRAM pool.<br>
+The architecture has hybrid approach where data can be stored in both SRAM and DRAM, to avoid storing excessive data on-chip as well as avoiding multiple DRAM accesses by storing enough intermediate data in SRAM.</p>
+<ul>
+<li>It&rsquo;s organised as 16 banks (91.5 KiB each), each capable of 128 bit read or write per cycle.</li>
+<li>Any port can access any bank, but one at a time. If there&rsquo;s a conflict, remaining ports are forced to wait.</li>
+<li>Some ports (6 ports) have multiple clients attached to them via mux, only one client can access it at a time and remaining will be forced to wait.</li>
+</ul>
+<p><img src="https://nogieman.github.io/nogieman/images/L1.png" alt="L1"></p>
+<h5 id="functionalities-supported-by-the-ports">Functionalities supported by the ports:</h5>
+<ul>
+<li>128 bit read-write.</li>
+<li>Narrow reads, implemented by simply reading 128 bits and discarding unwamted bits, hence uses same BW as normal read.</li>
+<li>Narrow writes, implemented by read-modify-write operation, blocking port as well as the bank for 5 cycles, hence uses 5 times of the write bandwidth.</li>
+<li>Atomics (operations executed as one uninterrupted task) are implemented as read-modify-write opetations, and block the port and the corresponding bank for 5 cycles. This function is exposed to NoC and ThCon.</li>
+<li>Near memory accumulate (4x FP32 or INT32, sign-magniture with saturation, or 8x FP16, BF16) is implemented as atomic read-modify-write operation, or non-atomic operation. If non-atomic, then it blocks the prot and bank for only 2 cycles, but users have to ensure overlapping operations are not targetting overlapping addresses in the banks. This function is exposed to packers.</li>
+</ul>
+<p>The physical placement of DRAM controllers are exploited by default, using &ldquo;interleaved&rdquo; mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in &ldquo;sharded&rdquo; mode where tensors are distributed across multiple Tensix cores. We&rsquo;ll see them in detail.</p>
 <h1 id="to-be-continued-because-lazy">[To be continued because lazy]</h1>
 
     </div>
