@@ -60,6 +60,7 @@ Components in Tensix Cores:
 | RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration|  Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
 
 
+#### NoC Interfaces 
 
 ![Pipeline](https://nogieman.github.io/nogieman/images/pipeline.png)
 
@@ -74,7 +75,7 @@ The architecture has hybrid approach where data can be stored in both SRAM and D
 
 ![L1](https://nogieman.github.io/nogieman/images/L1.png)
 
-##### Functionalities supported by the ports:
+Functionalities supported by the ports:
 - 128 bit read-write.
 - Narrow reads, implemented by simply reading 128 bits and discarding unwamted bits, hence uses same BW as normal read.
 - Narrow writes, implemented by read-modify-write operation, blocking port as well as the bank for 5 cycles, hence uses 5 times of the write bandwidth.
@@ -82,5 +83,36 @@ The architecture has hybrid approach where data can be stored in both SRAM and D
 - Near memory accumulate (4x FP32 or INT32, sign-magniture with saturation, or 8x FP16, BF16) is implemented as atomic read-modify-write operation, or non-atomic operation. If non-atomic, then it blocks the prot and bank for only 2 cycles, but users have to ensure overlapping operations are not targetting overlapping addresses in the banks. This function is exposed to packers.
 
 The physical placement of DRAM controllers are exploited by default, using "interleaved" mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in "sharded" mode where tensors are distributed across multiple Tensix cores. We'll see them in detail.
+
+#### Bandwidth
+##### RISCV Cores 
+-> These store instructions (always narrow), so peak bandwidth is 32 bit write every 5 cycles (6.4 bits per cycle). It can be delayed more when other hardwares are trying to access via same port.
+-> Number of issued loads is limited to 4, hence the sustained throughput is limited to 4 32-bit reads every 7 cycles. If loads are interdependent, throughput may decrease even further with poorly sheduled assembly, to 1 load every 8 cycles.
+-> Instruction fetches into cache are always 128 bit, so it yields 4 instructions, so it's expected to occur once every 4 cycles at most, and ideally it's even less if instruction cache hit rate is high.
+
+-> These numbers are lower than other `clients`, so it's better if the cores insrtruct the clients to access L1 on their behalf. For atomic operations, they have to instruct either ThCon or NoC to perform, as they don't implement "A" instructions.
+-> It's better to use any other memory region as their bandwidth is higher than L1. Particularly, it's better the call stack is kept in local data RAM rather than L1.
+
+##### Mover
+-> It has 1 connection each for reading and writing. Theoretically it allows one 128 bit read and write every cycle, but practucally it does eight 128 bit read and write in 11 cycles (93.1 x2 bit per cycle). The port connection's access may reduce it further.
+-> Reader and writer do not have any bank conflicts, because usually they don't access same bank. It may cause a conflict if they're accessed by different clients and they need the same bank.
+
+##### Unpackers
+-> If one unpacker is operating, it can achieve four 128 bit reads in 1 cycle theoretically. If both are operating, thoretically they can achieve five 128 bit reads per cycle because of shared ports.
+-> There could be a lot of access port connection for BFFP exponent reads but they're infrequent, because one read can provide exponents for 256 datums.
+-> The bottleneck for it could be the downstream, where it'll stop reading from L1.
+
+##### Packers 
+-> There are 4 packers, each theoretically capable of one 128 bit write or atomic accumulate every 5 cycles or one 128 bit non atomic accumulate every 2 cycles. Port or bank contention may reduce this.
+-> Packer 0 can optionally read from L1, these operations can theoretically achieve one 128 bit write or read per cycle and one 128 bit accumulate evry 5 cycles. The remaining 3 can't do this so they'll be in idle when L1-L1 operation is being performed, so, Packer 2's write and Packer 0's operation can never have contention here in port 2.
+
+##### Scalar Unit (ThCon)
+-> Can perform 32 or 128 bit reads.
+-> Can issue only 1 memory request every 3 cycles.
+-> 32 bit write cycles have peak BW of one write every 5 cycles, so 128 bit is preferred.
+
+##### NoC
+-> Four 128 bit connections to L1, a pair for reading and writing each. They don't get port contention (as only debug clients are there) but may get bank conflicts.
+-> Theoretically they can do 256 bit reads and writes per cycle, and connections between adjacent NoC routers are also of same width so they can perform 256 bit hops through the network, and one hop takes 9 cycles.
 
 # [To be continued because lazy]
