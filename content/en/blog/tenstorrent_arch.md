@@ -28,7 +28,7 @@ Below is a table comparing their various accelerator cards with their performanc
 ## 1: What's a Tensix Tile/Core?
 Tenstorrent's architecture is a spacially distributed grid of compute cores connected by an NoC. They've named them `Tensix cores`. Fundamentally, the architecture isn't SIMD/SIMT or dataflow, it's basically a grid of Tensix cores and the compiler schedules compute load onto each core.
 Wormhole has around 64 Tensix cores, and blackhole has 128 as specified in the table, arranged in 2D torus topology connected by a quasi full duplex NoC (It's a fancy term I'll explain later).
-### 1.1: Components within a Tensix Core: 
+### Components within a Tensix Core: 
 Components in Tensix Cores:
 1. 1.5 MB SRAM (L1)
 2. 5x Baby RISCV (RV32IM)
@@ -37,7 +37,7 @@ Components in Tensix Cores:
 
 ![](https://nogieman.github.io/nogieman/images/tensix_dataflow.png)
 
-#### Baby RISCV Cores 
+#### 1.1: Baby RISCV Cores 
 - They are small 32-bit in-order single-issue cores, that execute RV32IM ISA + custom tensix extension.
 - The 5x RISCV cores are used as controllers, & are expected to execute one RV32IM instruction per cycle, with 1GHz clk. 
    The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -> Unpacking -> Compute -> Packing -> Data egress, are driven by the 5 RISCV cores.
@@ -60,11 +60,11 @@ Components in Tensix Cores:
 | RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration|  Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
 
 
-#### NoC Interfaces 
+#### 1.2: NoC Interfaces 
 
 ![Pipeline](https://nogieman.github.io/nogieman/images/pipeline.png)
 
-#### SRAM L1/Scratchpad
+#### 1.3: SRAM L1/Scratchpad
 TT calls this as L1 but it's just a Scratchpad, as mentioned in their tt-metal docs.
 The 1.5 MB SRAM is available per Tensix Core that holds transient data. Hundreads of tensix cores in the chip offer enough memory capacity. The architecture avoids complex cache hierarchies, and instead uses a flat software managed SRAM pool. 
 The architecture has hybrid approach where data can be stored in both SRAM and DRAM, to avoid storing excessive data on-chip as well as avoiding multiple DRAM accesses by storing enough intermediate data in SRAM.
@@ -84,8 +84,11 @@ Functionalities supported by the ports:
 
 The physical placement of DRAM controllers are exploited by default, using "interleaved" mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in "sharded" mode where tensors are distributed across multiple Tensix cores. We'll see them in detail.
 
-#### Bandwidth
-##### RISCV Cores 
+<!-- #### 1.4: Unpackers and Packers  -->
+
+
+### 2: Bandwidth
+##### 2.1: RISCV Cores 
 -> These store instructions (always narrow), so peak bandwidth is 32 bit write every 5 cycles (6.4 bits per cycle). It can be delayed more when other hardwares are trying to access via same port.
 -> Number of issued loads is limited to 4, hence the sustained throughput is limited to 4 32-bit reads every 7 cycles. If loads are interdependent, throughput may decrease even further with poorly sheduled assembly, to 1 load every 8 cycles.
 -> Instruction fetches into cache are always 128 bit, so it yields 4 instructions, so it's expected to occur once every 4 cycles at most, and ideally it's even less if instruction cache hit rate is high.
@@ -93,25 +96,25 @@ The physical placement of DRAM controllers are exploited by default, using "inte
 -> These numbers are lower than other `clients`, so it's better if the cores insrtruct the clients to access L1 on their behalf. For atomic operations, they have to instruct either ThCon or NoC to perform, as they don't implement "A" instructions.
 -> It's better to use any other memory region as their bandwidth is higher than L1. Particularly, it's better the call stack is kept in local data RAM rather than L1.
 
-##### Mover
+##### 2.2: Mover
 -> It has 1 connection each for reading and writing. Theoretically it allows one 128 bit read and write every cycle, but practucally it does eight 128 bit read and write in 11 cycles (93.1 x2 bit per cycle). The port connection's access may reduce it further.
 -> Reader and writer do not have any bank conflicts, because usually they don't access same bank. It may cause a conflict if they're accessed by different clients and they need the same bank.
 
-##### Unpackers
+##### 2.3: Unpackers
 -> If one unpacker is operating, it can achieve four 128 bit reads in 1 cycle theoretically. If both are operating, thoretically they can achieve five 128 bit reads per cycle because of shared ports.
 -> There could be a lot of access port connection for BFFP exponent reads but they're infrequent, because one read can provide exponents for 256 datums.
 -> The bottleneck for it could be the downstream, where it'll stop reading from L1.
 
-##### Packers 
+##### 2.4: Packers 
 -> There are 4 packers, each theoretically capable of one 128 bit write or atomic accumulate every 5 cycles or one 128 bit non atomic accumulate every 2 cycles. Port or bank contention may reduce this.
 -> Packer 0 can optionally read from L1, these operations can theoretically achieve one 128 bit write or read per cycle and one 128 bit accumulate evry 5 cycles. The remaining 3 can't do this so they'll be in idle when L1-L1 operation is being performed, so, Packer 2's write and Packer 0's operation can never have contention here in port 2.
 
-##### Scalar Unit (ThCon)
+##### 2.5: Scalar Unit (ThCon)
 -> Can perform 32 or 128 bit reads.
 -> Can issue only 1 memory request every 3 cycles.
 -> 32 bit write cycles have peak BW of one write every 5 cycles, so 128 bit is preferred.
 
-##### NoC
+##### 2.6: NoC
 -> Four 128 bit connections to L1, a pair for reading and writing each. They don't get port contention (as only debug clients are there) but may get bank conflicts.
 -> Theoretically they can do 256 bit reads and writes per cycle, and connections between adjacent NoC routers are also of same width so they can perform 256 bit hops through the network, and one hop takes 9 cycles.
 
