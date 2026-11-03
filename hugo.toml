@@ -19,7 +19,7 @@ defaultContentLanguageInSubdir = true
     contentDir = "content/en"
     [languages.en.menu]
       [[languages.en.menu.main]]
-        name = "Who dis"
+        name = "Who's dis"
         pageRef = "/about"
         weight = 1
       [[languages.en.menu.main]]

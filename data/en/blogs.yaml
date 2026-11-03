@@ -6,6 +6,12 @@ blogs:
     content: ""
     link: "/en/blog/flashing_rom/"
 
+  - title: "Tenstorrent's wormhole architecture"
+    date: "2026-06-07"
+    summary: "Overview about Tenstorrent's AI hardware"
+    tags: ["Wormhole", "Tenstorrent", "Accelerator","AI"]
+    content: ""
+    link: "/en/blog/tenstorrent_arch/"
   # - title: "Are LLMs Needlessly Huge? Extreme Compression of LLMs using Quantum Inspired Tensor Networks"
   #   date: "2025-08-23"
   #   summary: "Presents a novel approach called CompactifAI by Multiverse Computing, which uses quantum-inspired tensor networks to drastically compress LLMs with minimal loss in accuracy. "
