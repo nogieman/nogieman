@@ -1,12 +1,14 @@
 
 ---
-title: "Surface diving into Tenstorrent's Wormhole architecture"
+title: "Surface drifting around Tenstorrent's Wormhole architecture"
 date: 2026-06-07
 tags: ["AI", "Accelerator", "Blackhole", "Wormhole","Tenstorrent"]
 ---
 
 ## 0: Overview and stats
 This blog will be focusing mainly on it's microarchitecture, along with their NoC. I will touch their peripherals and compiler a lil as well, but won't be digging too much into their ISA, because honestly, it's a documentation hell in their tt-metal and ISA documentation repo (not complaining tho, thankyou TT for making it open, very cool).
+
+I'll make another blog specifically about their ISA but it's a bit tideous lol.
 
 Before understanding their microarchitecture, it's good to know the performance it delivers (LOL jk, I just put it there to sound like a nerd).
 Below is a table comparing their various accelerator cards with their performance and hardware specifications. We'll discuss everything soon dw.
@@ -53,17 +55,40 @@ Components in Tensix Cores:
 
 | Core Designation  | Primary Hardware Function                     | Pipeline Stage  | Local Instruction Memory| Local Data Memory | Coprocessor Privileges |
 |-------------------|-----------------------------------------------|-----------------|-------------------------|-------------------|------------------------|
-| RISC-V NC (NCRISC)| NoC 0 Control, DRAM Ingress                   |  Data Movement| ½ KiB Cache + 16 KiB RAM| 4 KiB RAM         | Debug Bus Only         |
+| RISC-V NC (NCRISC)| NoC 0 Control, DRAM Ingress                   |  Data Movement| 1/2 KiB Cache + 16 KiB RAM| 4 KiB RAM         | Debug Bus Only         |
 | RISC-V T0 (TRISC0)| Unpacker Hardware Dispatch                    |  Data Unpack  | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
-| RISC-V T1 (TRISC1)| Matrix (FPU) & Vector (SFPU) Dispatch         |  Compute      | ½ KiB Cache             | 2 KiB RAM         | High / Full Access     |
+| RISC-V T1 (TRISC1)| Matrix (FPU) & Vector (SFPU) Dispatch         |  Compute      | 1/2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
 | RISC-V T2 (TRISC2)| Packer Hardware Dispatch                      |  Data Pack    | 2 KiB Cache             | 2 KiB RAM         | High / Full Access     |
 | RISC-V B (BRISC)  | NoC 1 Control, DRAM Egress, Tile Orchestration|  Data Movement| 2 KiB Cache             | 4 KiB RAM         | Moderate               |
 
-
-#### 1.2: NoC Interfaces 
-
 ![Pipeline](https://nogieman.github.io/nogieman/images/pipeline.png)
 
+#### 1.2: NoC Interfaces 
+The Wormhole architecture as 2 NOCs (#0 and #1). Both are unidirectional and opposite to each other in data movement.
+So, combining both, we get sort of a single NOC that's bi-directional, something like a 2 channel NOC, hence the fancy "Quasi full-duplex" term.
+
+![NoC](https://nogieman.github.io/nogieman/images/noc.webp)
+
+Every NOC transaction/data movement operation has atleast one packet, and every packet has atleast one `Flit`. A flit is a small unit of data that is exactly of `32B` data.
+The NOCs have `routers` at the corner of each tensix tile that carryout data movement operations, and both NOCs together form a 2D torus structure (The edges are connected to each other).
+
+Both NOCs are connected to Network Interface Units (NIUs) within the Tensix tile.
+The NoC address space includes memory regions accessible to the NoC and the Tensix coprocessor.
+
+| Address Range               | Size     | Description                                               |
+| --------------------------- | -------- | --------------------------------------------------------- |
+| 0x0000_0000 – 0x0016_DFFF | 1464 KiB | L1 scratchpad |
+| 0xFFB1_1000 – 0xFFB1_1FFF | 4 KiB    | RISC config registers and command interface   |
+| 0xFFB1_2000 – 0xFFB1_2FFF | 4 KiB    | Tile control, debug and status registers                  |
+| 0xFFB1_3000 – 0xFFB1_3FFF | 4 KiB    | PIC configuration and status registers                    |
+| 0xFFB2_0000 – 0xFFB2_FFFF | 64 KiB   | NoC 0 configuration registers and command interface       |
+| 0xFFB3_0000 – 0xFFB3_FFFF | 64 KiB   | NoC 1 configuration registers and command interface       |
+| 0xFFB4_0000 – 0xFFB7_FFFF | 256 KiB  | NoC overlay configuration registers and command interface |
+
+NoC #0
+![NoC #0](https://nogieman.github.io/nogieman/images/NoC_0.svg)
+NoC #1
+![NoC #1](https://nogieman.github.io/nogieman/images/NoC_1.svg)
 #### 1.3: SRAM L1/Scratchpad
 TT calls this as L1 but it's just a Scratchpad, as mentioned in their tt-metal docs.
 The 1.5 MB SRAM is available per Tensix Core that holds transient data. Hundreads of tensix cores in the chip offer enough memory capacity. The architecture avoids complex cache hierarchies, and instead uses a flat software managed SRAM pool. 
@@ -84,10 +109,36 @@ Functionalities supported by the ports:
 
 The physical placement of DRAM controllers are exploited by default, using "interleaved" mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in "sharded" mode where tensors are distributed across multiple Tensix cores. We'll see them in detail.
 
-<!-- #### 1.4: Unpackers and Packers  -->
+#### 1.4: Unpackers and Packers 
+There are 2 unpackers in each Tensix Coprocessor: `unpacker0` and `unpacker1`, both controlled by `TRISC0`:
+- Unpacker 0: Data movement b/w L1 and `Dst` or `srcA` It's connected to both of them via a mux.
+- Unpacker 1: Data movement b/w L1 and `srcB`.
+Read about Unpackers in detail in their official [docs](https://github.com/tenstorrent/tt-isa-documentation/tree/main/WormholeB0/TensixTile/TensixCoprocessor/Unpackers)
+
+There's one Packer in the architecture, controlled by TRISC2.
+
+Unpacker 0 can access Dst register and can write data into it, for Vector ops.
+And unpacker's basic operation is data movement between L1 and `src` or `Dst` registers. It also supports various other operations like Format conversion (type casting, decompression, upsampling, etc.)
+
+The available unpacker format conversions vary slightly based on whether unpacking to `SrcA` or `SrcB` or `Dst`]:
+
+| Source Location   | Register | Conversion / Operation                    | Hardware Block      |
+| ----------------- | -------------------- | ----------------------------------------- | ------------------- |
+| SRAM (L1)           | SrcA               | BFP4, BFP8 -> common Src format                  | Unpacker0           |
+| SRAM           | SrcA               | FP16/BF16 passthrough -> common Src format | Unpacker0           |
+| SRAM           | SrcA               | Upsampling / transpose                    | Unpacker0           |
+| SRAM           | SrcB               | BFP4, BFP8 -> common Src format                  | Unpacker1           |
+| SRAM           | SrcB               | FP16/BF16 passthrough -> common Src format | Unpacker1           |
+| SRAM           | SrcB               | Decompression + unpack                    | Unpacker1           |
+| SrcA + SrcB   | Dst | Matrix multiply / elementwise compute     | FPU / Matrix Engine |
+| Dst | SRAM              | FP32/TF32/BF16 -> BlockFP8                 | Packer + Gasket     |
+| Dst | SRAM              | FP32/TF32/BF16 -> BlockFP4                 | Packer + Gasket     |
+
+![Unpacker](https://nogieman.github.io/nogieman/images/unpackers.png)
 
 
-### 2: Bandwidth
+### 2: Bandwidths
+To and from different hardwares within a Tensix tile:
 ##### 2.1: RISCV Cores 
 -> These store instructions (always narrow), so peak bandwidth is 32 bit write every 5 cycles (6.4 bits per cycle). It can be delayed more when other hardwares are trying to access via same port.
 -> Number of issued loads is limited to 4, hence the sustained throughput is limited to 4 32-bit reads every 7 cycles. If loads are interdependent, throughput may decrease even further with poorly sheduled assembly, to 1 load every 8 cycles.

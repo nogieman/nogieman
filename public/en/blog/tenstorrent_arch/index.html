@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/custom.css">
-        <title>Surface diving into Tenstorrent&#39;s Wormhole architecture - Lalith Chandra</title>
+        <title>Surface drifting around Tenstorrent&#39;s Wormhole architecture - Lalith Chandra</title>
         
         
         <link rel="apple-touch-icon" sizes="180x180" href="https://nogieman.github.io/favicon_io/apple-touch-icon.png">
@@ -432,7 +432,7 @@
         <main>
             
 <div class="w-3/4 max-w-5xl mx-auto py-12 px-4">
-    <h1 class="text-4xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">Surface diving into Tenstorrent&#39;s Wormhole architecture</h1>
+    <h1 class="text-4xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">Surface drifting around Tenstorrent&#39;s Wormhole architecture</h1>
 
     
         <div class="flex flex-wrap items-center gap-4 mb-10 text-text-secondary-light dark:text-text-secondary-dark">
@@ -480,6 +480,7 @@
     <div class="prose dark:prose-invert max-w-none leading-relaxed">
         <h2 id="0-overview-and-stats">0: Overview and stats</h2>
 <p>This blog will be focusing mainly on it&rsquo;s microarchitecture, along with their NoC. I will touch their peripherals and compiler a lil as well, but won&rsquo;t be digging too much into their ISA, because honestly, it&rsquo;s a documentation hell in their tt-metal and ISA documentation repo (not complaining tho, thankyou TT for making it open, very cool).</p>
+<p>I&rsquo;ll make another blog specifically about their ISA but it&rsquo;s a bit tideous lol.</p>
 <p>Before understanding their microarchitecture, it&rsquo;s good to know the performance it delivers (LOL jk, I just put it there to sound like a nerd).<br>
 Below is a table comparing their various accelerator cards with their performance and hardware specifications. We&rsquo;ll discuss everything soon dw.</p>
 <table>
@@ -599,7 +600,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
 					<td>RISC-V NC (NCRISC)</td>
 					<td>NoC 0 Control, DRAM Ingress</td>
 					<td>Data Movement</td>
-					<td>½ KiB Cache + 16 KiB RAM</td>
+					<td>1/2 KiB Cache + 16 KiB RAM</td>
 					<td>4 KiB RAM</td>
 					<td>Debug Bus Only</td>
 			</tr>
@@ -615,7 +616,7 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
 					<td>RISC-V T1 (TRISC1)</td>
 					<td>Matrix (FPU) &amp; Vector (SFPU) Dispatch</td>
 					<td>Compute</td>
-					<td>½ KiB Cache</td>
+					<td>1/2 KiB Cache</td>
 					<td>2 KiB RAM</td>
 					<td>High / Full Access</td>
 			</tr>
@@ -637,8 +638,65 @@ The fundamental life cycle of an AI compute kernel, i.e, Drata Ingress -&gt; Unp
 			</tr>
 	</tbody>
 </table>
-<h4 id="12-noc-interfaces">1.2: NoC Interfaces</h4>
 <p><img src="https://nogieman.github.io/nogieman/images/pipeline.png" alt="Pipeline"></p>
+<h4 id="12-noc-interfaces">1.2: NoC Interfaces</h4>
+<p>The Wormhole architecture as 2 NOCs (#0 and #1). Both are unidirectional and opposite to each other in data movement.<br>
+So, combining both, we get sort of a single NOC that&rsquo;s bi-directional, something like a 2 channel NOC, hence the fancy &ldquo;Quasi full-duplex&rdquo; term.</p>
+<p><img src="https://nogieman.github.io/nogieman/images/noc.webp" alt="NoC"></p>
+<p>Every NOC transaction/data movement operation has atleast one packet, and every packet has atleast one <code>Flit</code>. A flit is a small unit of data that is exactly of <code>32B</code> data.<br>
+The NOCs have <code>routers</code> at the corner of each tensix tile that carryout data movement operations, and both NOCs together form a 2D torus structure (The edges are connected to each other).</p>
+<p>Both NOCs are connected to Network Interface Units (NIUs) within the Tensix tile.<br>
+The NoC address space includes memory regions accessible to the NoC and the Tensix coprocessor.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Address Range</th>
+					<th>Size</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>0x0000_0000 – 0x0016_DFFF</td>
+					<td>1464 KiB</td>
+					<td>L1 scratchpad</td>
+			</tr>
+			<tr>
+					<td>0xFFB1_1000 – 0xFFB1_1FFF</td>
+					<td>4 KiB</td>
+					<td>RISC config registers and command interface</td>
+			</tr>
+			<tr>
+					<td>0xFFB1_2000 – 0xFFB1_2FFF</td>
+					<td>4 KiB</td>
+					<td>Tile control, debug and status registers</td>
+			</tr>
+			<tr>
+					<td>0xFFB1_3000 – 0xFFB1_3FFF</td>
+					<td>4 KiB</td>
+					<td>PIC configuration and status registers</td>
+			</tr>
+			<tr>
+					<td>0xFFB2_0000 – 0xFFB2_FFFF</td>
+					<td>64 KiB</td>
+					<td>NoC 0 configuration registers and command interface</td>
+			</tr>
+			<tr>
+					<td>0xFFB3_0000 – 0xFFB3_FFFF</td>
+					<td>64 KiB</td>
+					<td>NoC 1 configuration registers and command interface</td>
+			</tr>
+			<tr>
+					<td>0xFFB4_0000 – 0xFFB7_FFFF</td>
+					<td>256 KiB</td>
+					<td>NoC overlay configuration registers and command interface</td>
+			</tr>
+	</tbody>
+</table>
+<p>NoC #0<br>
+<img src="https://nogieman.github.io/nogieman/images/NoC_0.svg" alt="NoC #0"><br>
+NoC #1<br>
+<img src="https://nogieman.github.io/nogieman/images/NoC_1.svg" alt="NoC #1"></p>
 <h4 id="13-sram-l1scratchpad">1.3: SRAM L1/Scratchpad</h4>
 <p>TT calls this as L1 but it&rsquo;s just a Scratchpad, as mentioned in their tt-metal docs.<br>
 The 1.5 MB SRAM is available per Tensix Core that holds transient data. Hundreads of tensix cores in the chip offer enough memory capacity. The architecture avoids complex cache hierarchies, and instead uses a flat software managed SRAM pool.<br>
@@ -658,8 +716,86 @@ The architecture has hybrid approach where data can be stored in both SRAM and D
 <li>Near memory accumulate (4x FP32 or INT32, sign-magniture with saturation, or 8x FP16, BF16) is implemented as atomic read-modify-write operation, or non-atomic operation. If non-atomic, then it blocks the prot and bank for only 2 cycles, but users have to ensure overlapping operations are not targetting overlapping addresses in the banks. This function is exposed to packers.</li>
 </ul>
 <p>The physical placement of DRAM controllers are exploited by default, using &ldquo;interleaved&rdquo; mode where data is distributed across all available controllers to balance performance. For specific operations, the data can be stored in &ldquo;sharded&rdquo; mode where tensors are distributed across multiple Tensix cores. We&rsquo;ll see them in detail.</p>
-<!-- #### 1.4: Unpackers and Packers  -->
-<h3 id="2-bandwidth">2: Bandwidth</h3>
+<h4 id="14-unpackers-and-packers">1.4: Unpackers and Packers</h4>
+<p>There are 2 unpackers in each Tensix Coprocessor: <code>unpacker0</code> and <code>unpacker1</code>, both controlled by <code>TRISC0</code>:</p>
+<ul>
+<li>Unpacker 0: Data movement b/w L1 and <code>Dst</code> or <code>srcA</code> It&rsquo;s connected to both of them via a mux.</li>
+<li>Unpacker 1: Data movement b/w L1 and <code>srcB</code>.<br>
+Read about Unpackers in detail in their official <a href="https://github.com/tenstorrent/tt-isa-documentation/tree/main/WormholeB0/TensixTile/TensixCoprocessor/Unpackers">docs</a></li>
+</ul>
+<p>There&rsquo;s one Packer in the architecture, controlled by TRISC2.</p>
+<p>Unpacker 0 can access Dst register and can write data into it, for Vector ops.<br>
+And unpacker&rsquo;s basic operation is data movement between L1 and <code>src</code> or <code>Dst</code> registers. It also supports various other operations like Format conversion (type casting, decompression, upsampling, etc.)</p>
+<p>The available unpacker format conversions vary slightly based on whether unpacking to <code>SrcA</code> or <code>SrcB</code> or <code>Dst</code>]:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Source Location</th>
+					<th>Register</th>
+					<th>Conversion / Operation</th>
+					<th>Hardware Block</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>SRAM (L1)</td>
+					<td>SrcA</td>
+					<td>BFP4, BFP8 -&gt; common Src format</td>
+					<td>Unpacker0</td>
+			</tr>
+			<tr>
+					<td>SRAM</td>
+					<td>SrcA</td>
+					<td>FP16/BF16 passthrough -&gt; common Src format</td>
+					<td>Unpacker0</td>
+			</tr>
+			<tr>
+					<td>SRAM</td>
+					<td>SrcA</td>
+					<td>Upsampling / transpose</td>
+					<td>Unpacker0</td>
+			</tr>
+			<tr>
+					<td>SRAM</td>
+					<td>SrcB</td>
+					<td>BFP4, BFP8 -&gt; common Src format</td>
+					<td>Unpacker1</td>
+			</tr>
+			<tr>
+					<td>SRAM</td>
+					<td>SrcB</td>
+					<td>FP16/BF16 passthrough -&gt; common Src format</td>
+					<td>Unpacker1</td>
+			</tr>
+			<tr>
+					<td>SRAM</td>
+					<td>SrcB</td>
+					<td>Decompression + unpack</td>
+					<td>Unpacker1</td>
+			</tr>
+			<tr>
+					<td>SrcA + SrcB</td>
+					<td>Dst</td>
+					<td>Matrix multiply / elementwise compute</td>
+					<td>FPU / Matrix Engine</td>
+			</tr>
+			<tr>
+					<td>Dst</td>
+					<td>SRAM</td>
+					<td>FP32/TF32/BF16 -&gt; BlockFP8</td>
+					<td>Packer + Gasket</td>
+			</tr>
+			<tr>
+					<td>Dst</td>
+					<td>SRAM</td>
+					<td>FP32/TF32/BF16 -&gt; BlockFP4</td>
+					<td>Packer + Gasket</td>
+			</tr>
+	</tbody>
+</table>
+<p><img src="https://nogieman.github.io/nogieman/images/unpackers.png" alt="Unpacker"></p>
+<h3 id="2-bandwidths">2: Bandwidths</h3>
+<p>To and from different hardwares within a Tensix tile:</p>
 <h5 id="21-riscv-cores">2.1: RISCV Cores</h5>
 <p>-&gt; These store instructions (always narrow), so peak bandwidth is 32 bit write every 5 cycles (6.4 bits per cycle). It can be delayed more when other hardwares are trying to access via same port.<br>
 -&gt; Number of issued loads is limited to 4, hence the sustained throughput is limited to 4 32-bit reads every 7 cycles. If loads are interdependent, throughput may decrease even further with poorly sheduled assembly, to 1 load every 8 cycles.<br>
